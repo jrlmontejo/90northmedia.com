@@ -1,0 +1,11 @@
+{
+  "name": "whitewidget/whitewidget-wordpress",
+  "repositories": [{
+      "type": "composer",
+      "url": "https://wpackagist.org"
+  }],
+  "require": {
+    "wpackagist-plugin/custom-post-type-ui": "@dev",
+    "wpackagist-plugin/advanced-custom-fields": "@dev"
+  }
+}
