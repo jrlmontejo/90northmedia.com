@@ -10,7 +10,7 @@
 
 ### Notes ###
 
-Do not install new themes and/or plugins via the Wordpress Admin Dashboard. If you want to add a new theme/plugin, include it in `composer.json` instead and run `composer update`. You may browse for available themes/plugins at [https://wpackagist.org/](https://wpackagist.org/)
+Do not install new themes and/or plugins via the Wordpress Admin Dashboard. If you want to add a new theme/plugin, include it in `composer.json` instead and run `composer update`. You may browse for available themes/plugins at [https://wpackagist.org/](https://wpackagist.org/).
 
 ### Versions ###
 
