@@ -1,9 +1,9 @@
 # White Widget Wordpress Boilerplate #
 
-Wordpress: 4.6.1
-PHP: 5.6.25
-Jquery: 3.1.1
-Bootstrap: 4.0.0
+* Wordpress: 4.6.1
+* PHP: 5.6.25
+* Jquery: 3.1.1
+* Bootstrap: 4.0.0
 
 ### How do I get set up? ###
 
