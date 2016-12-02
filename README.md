@@ -1,5 +1,7 @@
 # White Widget Wordpress Boilerplate #
 
+A boilerplate to kickstart the development of Wordpress projects
+
 ### How do I get set up? ###
 
 1. Download and install composer - [https://getcomposer.org/](https://getcomposer.org/)
