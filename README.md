@@ -3,10 +3,13 @@
 ### How do I get set up? ###
 
 1. Download and install composer - [https://getcomposer.org/](https://getcomposer.org/)
-2. Run `composer install` to install the Blankslate parent theme and the CPT and ACF plugins
-3. Create a `wp-config.php` file based on `wp-config-sample.php`
-4. Create a local server (I use MAMP Pro)
-5. Activate the White Widget Boilerplate theme
+2. Run `composer install` to install the CPT and ACF plugins.
+3. Create a `wp-config.php` file based on `wp-config-sample.php`.
+4. Create a local server (I use MAMP Pro).
+5. In the `/wwboilerplate` folder, find and replace 'wwboilerplate' with the name of your project.
+6. Rename the `/wwboilerplate` folder to the name of your project.
+7. Edit the theme info in `style.css`.
+8. Activate your new theme via the Wordpress Dashboard.
 
 ### Notes ###
 
