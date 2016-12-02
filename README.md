@@ -16,13 +16,13 @@
 Do not install new themes and/or plugins via the Wordpress Admin Dashboard. If you want to add a new theme/plugin, include it in `composer.json` instead and run `composer update`. You may browse for available themes/plugins at [https://wpackagist.org/](https://wpackagist.org/).
 
 To make sure you don't accidentally install a theme/plugin via the Wordpress Dashboard, you can disable editing by adding this line to your `wp-config.php`:
-```
-define('DISALLOW_FILE_MODS', true);
+```php
+<?php define('DISALLOW_FILE_MODS', true); ?>
 ```
 
 Also, make sure you enable `WP_DEBUG` in `wp-config.php`:
-```
-define('WP_DEBUG', true);
+```php
+<?php define('WP_DEBUG', true); ?>
 ```
 
 ### Versions ###
