@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4f54fd0944a85be3f11f97e0854258f2",
-    "content-hash": "515a98e6945e6dd37c4eec0f5c6e7d10",
+    "hash": "b4434739d62610787ca2964d610da44b",
+    "content-hash": "ed4a4f8b3eac40cdaaa681313bb57fa3",
     "packages": [
         {
             "name": "composer/installers",
@@ -155,26 +155,6 @@
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/custom-post-type-ui/",
             "time": "2016-10-17 19:10:24"
-        },
-        {
-            "name": "wpackagist-theme/blankslate",
-            "version": "4.0.3",
-            "source": {
-                "type": "svn",
-                "url": "https://themes.svn.wordpress.org/blankslate/",
-                "reference": "4.0.3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/blankslate.4.0.3.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-theme",
-            "homepage": "https://wordpress.org/themes/blankslate/"
         }
     ],
     "packages-dev": [],
