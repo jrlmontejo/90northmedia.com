@@ -1,17 +1,13 @@
-# White Widget Wordpress Boilerplate #
-
-A boilerplate to kickstart the development of Wordpress projects
+# 90northmedia.com #
 
 ### How do I get set up? ###
 
 1. Download and install composer - [https://getcomposer.org/](https://getcomposer.org/)
 2. Run `composer install` to install the CPT and ACF plugins.
-3. Create a `wp-config.php` file based on `wp-config-sample.php`.
-4. Create a local server (I use MAMP Pro).
-5. In the `/wwboilerplate` folder, find and replace 'wwboilerplate' with the name of your project.
-6. Rename the `/wwboilerplate` folder to the name of your project.
-7. Edit the theme info in `style.css`.
-8. Activate your new theme via the Wordpress Dashboard.
+3. Create a local server (I use MAMP Pro).
+4. Import `90northmedia_db.sql` to your local database.
+5. Edit your database details on `wp-config.php`.
+6. Access the site using the address from your local server.
 
 ### Notes ###
 
@@ -29,14 +25,11 @@ Also, make sure you enable `WP_DEBUG` in `wp-config.php`:
 
 ### Versions ###
 
-* Wordpress: 4.6.1
-* PHP: 5.6.25
+* Wordpress: 4.7.1
+* PHP: 5.6.10
 * Jquery: 3.1.1
 * Bootstrap: 4.0.0
 
 ### Who do I talk to? ###
 
-* Jaye (jaye@whitewidget.com)
-* Meio (meio@whitewidget.com)
-* RR (rr@whitewidget.com)
-* Dre (andrea@whitewidget.com)
+* Jaye (jrlmontejo@gmail.com)
