@@ -6,8 +6,14 @@
 2. Run `composer install` to install the CPT and ACF plugins.
 3. Create a local server (I use MAMP Pro).
 4. Import `90northmedia_db.sql` to your local database.
-5. Edit your database details on `wp-config.php`.
-6. Access the site using the address from your local server.
+5. On your newly imported database, update the `siteurl` and `home` values on the `wp_options` table.
+6. Edit your database details on `wp-config.php`.
+7. Access the site using the address from your local server.
+
+### Default Login Details ###
+
+Username: 90northmedia
+Password: 123456
 
 ### Notes ###
 
