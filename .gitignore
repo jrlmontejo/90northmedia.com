@@ -10,7 +10,7 @@ wp-content/uploads/
 wp-content/wp-cache-config.php
 
 wp-content/themes/*
-!wp-content/themes/wwboilerplate/
+!wp-content/themes/ninetynorthmedia/
 
 wp-content/plugins/*
 !wp-content/plugins/index.php
