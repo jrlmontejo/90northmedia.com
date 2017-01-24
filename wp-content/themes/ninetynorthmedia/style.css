@@ -37,6 +37,11 @@ body {
 a {
 	color: #D92935;
 }
+a:hover,
+a:focus,
+a:active {
+	text-decoration: none;
+}
 
 .mobileHeader {
 	
@@ -243,6 +248,9 @@ a {
 .mainFooter_copy,
 .mainFooter_social {
 	text-align: center;
+}
+.mainFooter_social a {
+	color: white;
 }
 .mainFooter_social i {
 	margin-left: 15px;
