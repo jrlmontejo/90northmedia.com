@@ -269,7 +269,17 @@ a:active {
 
 /* Small devices */
 @media (min-width: 567px) {
-	
+	.mainFooter {
+		position: relative;
+	}
+	.mainFooter_social {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+	}
+	.mainFooter_copy {
+		padding-top: 30px;
+	}
 }
 /* Medium devices */
 @media (min-width: 768px) {
@@ -281,14 +291,6 @@ a:active {
 	}
 	.mainContent {
 		margin-top: 82px;
-	}
-	.mainFooter {
-		position: relative;
-	}
-	.mainFooter_social {
-		position: absolute;
-		top: 20px;
-		right: 20px;
 	}
 }
 /* Large devices */
@@ -304,9 +306,6 @@ a:active {
 	}
 	.mainFooter_social i {
 		margin: 0 0 0 10px;
-	}
-	.mainFooter_copy {
-		padding-top: 30px;
 	}
 }
 /* Extra-large devices */
