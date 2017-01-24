@@ -173,7 +173,7 @@ a:active {
 
 .mainHeader {
 	display: none;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -242,18 +242,29 @@ a:active {
 	color: white;
 	font-size: 14px;
 }
-.mainFooter_copy {
-	padding: 4px 20px 15px 20px;
+.mainFooter_contact_info {
+	padding-bottom: 10px;
 }
-.mainFooter_copy,
+.mainFooter_contact_info i {
+	float: left;
+	padding: 5px 0;
+	margin-right: 20px;
+}
 .mainFooter_social {
 	text-align: center;
+	font-size: 2em;
+	padding: 10px 0;
 }
 .mainFooter_social a {
 	color: white;
 }
 .mainFooter_social i {
-	margin-left: 15px;
+	margin: 0 5px;
+}
+
+.mainFooter_copy {
+	text-align: center;
+	padding-top: 10px;
 }
 
 /* Small devices */
@@ -271,12 +282,13 @@ a:active {
 	.mainContent {
 		margin-top: 82px;
 	}
-	.mainFooter_copy {
-		text-align: left;
-		padding: 5px 0;
+	.mainFooter {
+		position: relative;
 	}
 	.mainFooter_social {
-		text-align: right;
+		position: absolute;
+		top: 20px;
+		right: 20px;
 	}
 }
 /* Large devices */
@@ -286,6 +298,15 @@ a:active {
 	}
 	.mainFooter {
 		padding: 20px 60px;
+	}
+	.mainFooter_social {
+		right: 60px;
+	}
+	.mainFooter_social i {
+		margin: 0 0 0 10px;
+	}
+	.mainFooter_copy {
+		padding-top: 30px;
 	}
 }
 /* Extra-large devices */
