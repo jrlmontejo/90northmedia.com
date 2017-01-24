@@ -4,24 +4,54 @@
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 		<?php wp_head(); ?>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+		<script>
+		  WebFont.load({
+		    google: {
+		      families: ['Raleway']
+		    }
+		  });
+		</script>
+		
+		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 	</head>
 	
 	<body <?php body_class(); ?>>
-		<div id="wrapper" class="hfeed">
+		<div class="wrapper">
 			<header id="header" role="banner">
-			<section id="branding">
-				<div id="site-title"><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '<h1>'; } ?><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></a><?php if ( is_front_page() || is_home() || is_front_page() && is_home() ) { echo '</h1>'; } ?></div>
-				<div id="site-description"><?php bloginfo( 'description' ); ?></div>
-			</section>
-			
-			<nav id="menu" role="navigation">
-				<div id="search">
-					<?php get_search_form(); ?>
+				<div class="mobileHeader">
+					<input id="navbarCheck" type="checkbox" class="mobileHeader_check">
+					<div class="mobileHeader_navbar">
+						<label for="navbarCheck" class="mobileHeader_navbar_toggle">
+							<div class="mobileHeader_navbar_toggle_bar"></div>
+						</label>
+						<div class="mobileHeader_navbar_active">
+							<?php echo get_the_title(); ?>
+						</div>
+					</div>
+					<?php 
+						wp_nav_menu([
+							'theme_location' => 'main-menu',
+							'container_class' => 'mobileHeader_menu'
+						]); ?>
 				</div>
-				<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
-			</nav>
-		</header>
+
+				<div id="branding" class="mainHeader">
+					<div id="site-title" class="mainHeader_logo">
+						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">
+							<img class="img-fluid" src="<?php echo get_template_directory_uri() . "/assets/images/logo.png" ?>" />
+						</a>
+					</div>
+				
+					<?php 
+						wp_nav_menu([
+							'theme_location' => 'main-menu',
+							'container_class' => 'mainHeader_menu'
+						]); 
+					?>
+				</div>
+			</header>
 		
-		<div id="container">
+			<div id="container" class="mainContent">

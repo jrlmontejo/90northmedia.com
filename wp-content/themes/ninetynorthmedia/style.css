@@ -5,5 +5,282 @@ Description: This theme is based on the Blankslate theme
 Version: 1.0.0
 */
 
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{font-size:100%;font:inherit;padding:0;border:0;margin:0;vertical-align:baseline}body{line-height:1}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}table{border-collapse:collapse;border-spacing:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}.clear{clear:both}
-.sticky{}.bypostauthor{}.wp-caption{}.wp-caption-text{}.gallery-caption{}.alignright{}.alignleft{}.aligncenter{}.screen-reader-text{clip:rect(1px, 1px, 1px, 1px);position:absolute !important}
+/*
+Font sizes
+Small - 14px
+Normal - 16px
+Large - 24px
+
+Colors
+Gray - #9EA6A9
+Dark Gray - #424242
+Red - #D92935
+Black - #242424
+*/
+
+html {
+	height: 100%;
+}
+body {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+
+	font-family: "Raleway", sans-serif;
+	font-size: 16px;
+	color: #242424;
+}
+.wrapper {
+	flex: 1;
+}
+
+a {
+	color: #D92935;
+}
+
+.mobileHeader {
+	
+}
+
+.mobileHeader_navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: white;
+	padding: 0 20px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px 0px;
+	z-index: 99999;
+}
+.mobileHeader_navbar_active {
+	font-weight: bold;
+	text-transform: uppercase;
+	padding: 10px 0;
+}
+
+.mobileHeader_navbar_toggle {
+	display: block;
+	width: 25px;
+	height: 45px;
+	margin-right: 10px;
+	margin-bottom: 0;
+	float: left;
+	cursor: pointer;
+	padding: 21px 0;
+
+	transition: transform 0.5s;
+}
+.mobileHeader_navbar_toggle_bar {
+	background-color: #242424;
+	width: 100%;
+	height: 3px;
+	position: relative;
+}
+.mobileHeader_navbar_toggle_bar:before,
+.mobileHeader_navbar_toggle_bar:after {
+	position: absolute;
+	content: "";
+	width: 100%;
+	height: 3px;
+	background-color: #242424;
+}
+.mobileHeader_navbar_toggle_bar:before {
+	top: -7px;
+	transition: width 0.5s, top 0.5s, transform 0.5s;
+}
+.mobileHeader_navbar_toggle_bar:after {
+	bottom: -7px;
+	transition: width 0.5s, bottom 0.5s, transform 0.5s;
+}
+
+.mobileHeader_menu {
+	opacity: 0;
+	visibility: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 99998;
+
+	transition: opacity .5s, visibility .5s;
+}
+.mobileHeader_menu ul {
+	list-style: none;
+	padding: 70px 0;	
+	margin: 0;
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.2) 3px 0px 3px 0px;
+
+	position: fixed;
+	width: 100%;
+	max-width: 200px;
+	top: 0;
+	bottom: 0;
+	left: -200px;
+	z-index: 99998;
+
+	transition: left 0.5s;
+}
+.mobileHeader_menu ul li a {
+	color: #242424;
+	display: block;
+	padding: 10px 20px;
+}
+.mobileHeader_menu ul li.current-menu-item a {
+	color: #D92935;
+}
+.mobileHeader_menu ul li a:hover {
+	text-decoration: none;
+	background-color: #D92935;
+	color: white;
+}
+
+.mobileHeader_check {
+	display: none;
+}
+.mobileHeader_check:checked ~ .mobileHeader_navbar .mobileHeader_navbar_toggle {
+	transform: rotate(360deg);
+}
+.mobileHeader_check:checked ~ .mobileHeader_navbar .mobileHeader_navbar_toggle_bar:before {
+	width: 12px;
+	height: 3px;
+	background-color: #242424;
+	transform: rotate(-45deg);
+	left: 0;
+	top: -5px;
+}
+.mobileHeader_check:checked ~ .mobileHeader_navbar .mobileHeader_navbar_toggle_bar:after {
+	width: 12px;
+	height: 3px;
+	background-color: #242424;
+	transform: rotate(45deg);
+	left: 0;
+	bottom: -5px;
+}
+.mobileHeader_check:checked ~ .mobileHeader_menu {
+	opacity: 1;
+	visibility: visible;
+}
+.mobileHeader_check:checked ~ .mobileHeader_menu ul {
+	left: 0;
+}
+
+.mainHeader {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: white;
+	padding: 0 20px;
+	box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 3px 0px;
+	z-index: 99999;
+}
+.mainHeader_logo {
+	width: 140px;
+	float: left;
+	padding: 10px 0;
+}
+.mainHeader_menu {
+	float: right;
+}
+.mainHeader_menu ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.mainHeader_menu ul li {
+	float: left;
+}
+.mainHeader_menu ul li a {
+	position: relative;
+	color: #242424;
+	display: block;
+	padding: 29px 10px;
+	margin-left: 5px;
+}
+.mainHeader_menu ul li a:before {
+	position: absolute;
+	top: -5px;
+	left: 0;
+	content: "";
+	background-color: #D92935;
+	width: 100%;
+	height: 5px;
+
+	transition: top 0.1s;
+}
+.mainHeader_menu ul li.current-menu-item a:before {
+	top: 0;
+}
+.mainHeader_menu ul li a:hover {
+	text-decoration: none;
+}
+.mainHeader_menu ul li a:hover:before {
+	top: 0;
+}
+
+.mainHeader_menu ul li:last-child a {
+	font-weight: bold;
+	color: #D92935;
+	margin-left: 25px;
+}
+
+.mainContent {
+	margin-top: 45px;
+}
+
+.mainFooter {
+	background-color: #424242;
+	padding: 20px;
+	color: white;
+	font-size: 14px;
+}
+.mainFooter_copy {
+	padding: 4px 20px 15px 20px;
+}
+.mainFooter_copy,
+.mainFooter_social {
+	text-align: center;
+}
+.mainFooter_social i {
+	margin-left: 15px;
+}
+
+/* Small devices */
+@media (min-width: 567px) {
+	
+}
+/* Medium devices */
+@media (min-width: 768px) {
+	.mobileHeader {
+		display: none;
+	}
+	.mainHeader {
+		display: block;
+	}
+	.mainContent {
+		margin-top: 82px;
+	}
+	.mainFooter_copy {
+		text-align: left;
+		padding: 5px 0;
+	}
+	.mainFooter_social {
+		text-align: right;
+	}
+}
+/* Large devices */
+@media (min-width: 992px) {
+	.mainHeader {
+		padding: 0 60px;
+	}
+	.mainFooter {
+		padding: 20px 60px;
+	}
+}
+/* Extra-large devices */
+@media (min-width: 1200px) {
+
+}
