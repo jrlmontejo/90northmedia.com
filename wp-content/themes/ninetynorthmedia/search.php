@@ -3,7 +3,6 @@
 <section id="content" role="main">
 	<?php if ( have_posts() ) : ?>
 		<header class="header">
-			Test 2
 			<h1 class="entry-title"><?php printf( __( 'Search Results for: %s', 'ninetynorthmedia' ), get_search_query() ); ?></h1>
 		</header>
 	

@@ -4,7 +4,6 @@
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width" />
-		<?php wp_head(); ?>
 
 		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 		<script>
@@ -14,6 +13,8 @@
 		    }
 		  });
 		</script>
+
+		<?php wp_head(); ?>
 		
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 	</head>
