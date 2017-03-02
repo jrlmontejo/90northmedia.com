@@ -173,7 +173,7 @@ a:active {
 
 .mainHeader {
 	display: none;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
@@ -186,6 +186,7 @@ a:active {
 	width: 140px;
 	float: left;
 	padding: 10px 0;
+	display: none;
 }
 .mainHeader_menu {
 	float: right;
@@ -202,7 +203,7 @@ a:active {
 	position: relative;
 	color: #242424;
 	display: block;
-	padding: 29px 10px;
+	padding: 29px 8px;
 	margin-left: 5px;
 }
 .mainHeader_menu ul li a:before {
@@ -229,7 +230,7 @@ a:active {
 .mainHeader_menu ul li:last-child a {
 	font-weight: bold;
 	color: #D92935;
-	margin-left: 25px;
+	margin-left: 15px;
 }
 
 .mainContent {
@@ -264,7 +265,50 @@ a:active {
 
 .mainFooter_copy {
 	text-align: center;
-	padding-top: 10px;
+	padding-top: 15px;
+}
+
+/* Home page */
+
+.home {
+}
+.home_atf {
+	position: relative;
+	background-color: white;
+	min-height: 600px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-bottom: 2px solid #D92935;
+}
+.home_atf_header_logo {
+	width: 340px;
+	margin: 0 auto;
+}
+.home_atf_header_logo img {
+}
+#myCanvas {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+.home_section {
+	height: 300px;
+	border-bottom: 1px solid #979FA2;
+}
+
+.home_atf_header_caption {
+	margin: 0 auto;
+	max-width: 400px;
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 60px;
+/*	color: white;
+	text-shadow: 1px 1px #424242;*/
 }
 
 /* Small devices */
@@ -298,6 +342,15 @@ a:active {
 	.mainHeader {
 		padding: 0 60px;
 	}
+
+	.mainHeader_menu ul li a {
+		padding: 29px 10px;
+	}
+
+	.mainHeader_menu ul li:last-child a {
+		margin-left: 25px;
+	}
+
 	.mainFooter {
 		padding: 20px 60px;
 	}

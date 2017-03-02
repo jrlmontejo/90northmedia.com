@@ -15,7 +15,6 @@
 		</script>
 
 		<?php wp_head(); ?>
-		
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 	</head>
 	
@@ -40,7 +39,7 @@
 				</div>
 
 				<div id="branding" class="mainHeader">
-					<div id="site-title" class="mainHeader_logo">
+					<div id="site-title" class="mainHeader_logo mainHeader_logo-js">
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_html( get_bloginfo( 'name' ) ); ?>" rel="home">
 							<img class="img-fluid" src="<?php echo get_template_directory_uri() . "/assets/images/logo.png" ?>" />
 						</a>
