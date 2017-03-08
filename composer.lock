@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b4434739d62610787ca2964d610da44b",
-    "content-hash": "ed4a4f8b3eac40cdaaa681313bb57fa3",
+    "hash": "e3de712be374b426eada938cd9f1dbb5",
+    "content-hash": "823098c5632e4f77c19eb6091a2ff2df",
     "packages": [
         {
             "name": "composer/installers",
@@ -155,6 +155,27 @@
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/custom-post-type-ui/",
             "time": "2016-10-17 19:10:24"
+        },
+        {
+            "name": "wpackagist-plugin/underconstruction",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/underconstruction/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/underconstruction.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/underconstruction/",
+            "time": "2017-02-05 23:15:46"
         }
     ],
     "packages-dev": [],
@@ -162,7 +183,8 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "wpackagist-plugin/custom-post-type-ui": 20,
-        "wpackagist-plugin/advanced-custom-fields": 20
+        "wpackagist-plugin/advanced-custom-fields": 20,
+        "wpackagist-plugin/underconstruction": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

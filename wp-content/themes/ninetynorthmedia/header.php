@@ -54,4 +54,4 @@
 				</div>
 			</header>
 		
-			<div id="container" class="mainContent">
+			<div id="container" class="mainContent mainContent-js">

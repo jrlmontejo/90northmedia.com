@@ -70,7 +70,9 @@ function ninetynorthmedia_add_scripts() {
 		"jquery"     => '//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js',
 		"tether"     => '//cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js',
 		"bootstrap4" => '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js',
-		"paper"			 => get_template_directory_uri() . '/js/paper-full.min.js'
+		"focuspoint" => get_template_directory_uri() . '/js/jquery.focuspoint.min.js',
+		"wow"        => get_template_directory_uri() . '/js/wow.min.js'
+		// "paper"      => get_template_directory_uri() . '/js/paper-full.min.js'
 	];
 
 	foreach( $scripts as $scr_handle => $scr_url ) {
@@ -83,8 +85,10 @@ add_action( 'wp_enqueue_scripts', 'ninetynorthmedia_add_scripts' );
 function ninetynorthmedia_add_styles() {
 	// list all CSS files here
 	$styles = [
-		"bootstrap4" => '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css',
-		"font-awesome" => get_template_directory_uri() . '/css/font-awesome.css'
+		"bootstrap4"   => '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css',
+		"font-awesome" => get_template_directory_uri() . '/css/font-awesome.css',
+		"animate"      => get_template_directory_uri() . '/css/animate.css',
+		"focuspoint"   => get_template_directory_uri() . '/css/focuspoint.css'
 	];
 
 	foreach( $styles as $style_handle => $style_url ) {
