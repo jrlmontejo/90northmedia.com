@@ -86,9 +86,9 @@ function ninetynorthmedia_add_styles() {
 	// list all CSS files here
 	$styles = [
 		"bootstrap4"   => '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css',
-		"font-awesome" => get_template_directory_uri() . '/css/font-awesome.css',
-		"animate"      => get_template_directory_uri() . '/css/animate.css',
-		"focuspoint"   => get_template_directory_uri() . '/css/focuspoint.css'
+		"font-awesome" => get_template_directory_uri() . '/css/lib/font-awesome.css',
+		"animate"      => get_template_directory_uri() . '/css/lib/animate.css',
+		"focuspoint"   => get_template_directory_uri() . '/css/lib/focuspoint.css'
 	];
 
 	foreach( $styles as $style_handle => $style_url ) {

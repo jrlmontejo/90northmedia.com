@@ -1,0 +1,23 @@
+/* Large devices */
+
+.mainHeader {
+	padding: 0 60px;
+}
+
+.mainHeader_menu ul li a {
+	padding: 29px 10px;
+}
+
+.mainHeader_menu ul li:last-child a {
+	margin-left: 25px;
+}
+
+.mainFooter {
+	padding: 20px 60px;
+}
+.mainFooter_social {
+	right: 60px;
+}
+.mainFooter_social i {
+	margin: 0 0 0 10px;
+}

@@ -6,6 +6,7 @@
   }],
   "require": {
     "wpackagist-plugin/custom-post-type-ui": "@dev",
-    "wpackagist-plugin/advanced-custom-fields": "@dev"
+    "wpackagist-plugin/advanced-custom-fields": "@dev",
+    "wpackagist-plugin/under-construction-page": "@dev"
   }
 }

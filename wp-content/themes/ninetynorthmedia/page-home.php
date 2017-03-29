@@ -6,7 +6,7 @@
 
 <?php get_header(); ?>
 
-<section id="content" role="main" class="home">	
+<section data-id="home" id="content" role="main" class="home">	
 	<div class="home_atf home_atf-js">
 		<!-- <canvas id="myCanvas" resize></canvas> -->
 		<!-- <div class='home_atf_pulse'> -->
@@ -82,8 +82,8 @@
 		</div>
 	</div>
 
-	<div class="home_section home_solutions">
-		<h2 class="home_section_title">End-to-end Solutions</h2>
+	<div class="pageSection home_solutions">
+		<h2 class="pageSection_title">End-to-end Solutions</h2>
 		<?php
 			$solutions = [[
 				'title' => 'Production',
@@ -152,8 +152,8 @@
 
 	</div>
 
-	<div class="home_section home_products">
-		<h2 class="home_section_title">Featured Products</h2>
+	<div class="pageSection home_products">
+		<h2 class="pageSection_title">Featured Products</h2>
 		<div class="container">
 			<div class="row decPadding">
 				<?php
@@ -171,18 +171,19 @@
 						'desc' => 'Easy Operation with High-Quality, Intuitive Monitoring'
 					]];
 
-					$delay = 0;
 					foreach($products as $i => $product) :
 						$photoOverlayBg = "linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1))";
 						$photoUrl = get_template_directory_uri() . "/assets/images/sample-products/" . $product['src'];
 						if($i == 0) :
 				?>
 					<div class="col-xs-12 decPadding">
-						<div 
-							class="product product-first"
-							style="<?php echo "background-image: " . $photoOverlayBg . ", url('" . $photoUrl . "')" ?>"
-						>
-							<div class="product_overlay product-first_overlay wow fadeInDown" data-wow-delay="<?php echo $delay . "s"; ?>">
+						<div class="product product-first">
+							<div 
+								class="product_photo"
+								style="<?php echo "background-image: " . $photoOverlayBg . ", url('" . $photoUrl . "')" ?>"
+							>
+							</div>
+							<div class="product_overlay product-first_overlay">
 								<div class="product_name">
 									<?php echo $product['name']; ?>	
 								</div>
@@ -194,11 +195,13 @@
 					</div>
 				<?php else : ?>
 					<div class="col-xs-12 col-sm-6 decPadding">
-						<div 
-							class="product"
-							style="<?php echo "background-image: " . $photoOverlayBg . ", url('" . $photoUrl . "')" ?>"
-						>
-							<div class="product_overlay wow fadeInDown" data-wow-delay="<?php echo $delay . "s"; ?>">
+						<div class="product">
+							<div 
+								class="product_photo"
+								style="<?php echo "background-image: " . $photoOverlayBg . ", url('" . $photoUrl . "')" ?>"
+							>
+							</div>
+							<div class="product_overlay">
 								<div class="product_name">
 									<?php echo $product['name']; ?>	
 								</div>
@@ -210,7 +213,6 @@
 					</div>
 				<?php 
 						endif;
-						$delay += 0.2;
 					endforeach; 
 				?>
 			</div>
@@ -226,8 +228,8 @@
 		</div>
 	</div>
 
-	<div class="home_section home_news">
-		<h2 class="home_section_title">Latest News</h2>
+	<div class="pageSection home_news">
+		<h2 class="pageSection_title">Latest News</h2>
 		<div class="container-fluid">
 			<div class="row">
 				<?php
@@ -287,8 +289,8 @@
 		</div>
 	</div>
 
-	<div class="home_section home_partners">
-		<h2 class="home_section_title">Partners</h2>
+	<div class="pageSection home_partners">
+		<h2 class="pageSection_title">Partners</h2>
 		<div class="container-fluid">
 			<div class="row">
 				<?php
@@ -315,8 +317,8 @@
 		</div>
 	</div>
 
-	<div class="home_section home_clients">
-		<h2 class="home_section_title">Clients</h2>
+	<div class="pageSection home_clients">
+		<h2 class="pageSection_title">Clients</h2>
 		<div class="container-fluid">
 			<div class="row">
 				<?php

@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e3de712be374b426eada938cd9f1dbb5",
-    "content-hash": "823098c5632e4f77c19eb6091a2ff2df",
+    "hash": "ce2dde366495f8ae4c8ffdb45f7f3cdf",
+    "content-hash": "1956f74b99f7a546eb81bdc2c11edcae",
     "packages": [
         {
             "name": "composer/installers",
@@ -157,16 +157,16 @@
             "time": "2016-10-17 19:10:24"
         },
         {
-            "name": "wpackagist-plugin/underconstruction",
+            "name": "wpackagist-plugin/under-construction-page",
             "version": "dev-trunk",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/underconstruction/",
+                "url": "https://plugins.svn.wordpress.org/under-construction-page/",
                 "reference": "trunk"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/underconstruction.zip",
+                "url": "https://downloads.wordpress.org/plugin/under-construction-page.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -174,8 +174,8 @@
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/underconstruction/",
-            "time": "2017-02-05 23:15:46"
+            "homepage": "https://wordpress.org/plugins/under-construction-page/",
+            "time": "2017-03-02 10:48:05"
         }
     ],
     "packages-dev": [],
@@ -184,7 +184,7 @@
     "stability-flags": {
         "wpackagist-plugin/custom-post-type-ui": 20,
         "wpackagist-plugin/advanced-custom-fields": 20,
-        "wpackagist-plugin/underconstruction": 20
+        "wpackagist-plugin/under-construction-page": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

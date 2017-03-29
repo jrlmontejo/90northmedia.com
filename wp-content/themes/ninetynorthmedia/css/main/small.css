@@ -1,0 +1,17 @@
+/* Small devices */
+
+.mainFooter {
+	position: relative;
+}
+.mainFooter_social {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+.mainFooter_copy {
+	padding-top: 30px;
+}
+
+.home_solutions .solution {
+	font-size: 0.9em;
+}

@@ -1,0 +1,15 @@
+/* Medium devices */
+
+.mobileHeader {
+	display: none;
+}
+.mainHeader {
+	display: block;
+}
+.mainContent {
+	margin-top: 82px;
+}
+
+.home_moreProducts {
+	text-align: right;
+}

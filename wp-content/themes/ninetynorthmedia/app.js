@@ -2,38 +2,75 @@ var App = (function($) {
 	// private variables here
 	var win = $(window);
 	var focuspoint = $('.focuspoint');
+
+	var currentPage = $('#content').data('id');
+
 	var headerLogo = $('.mainHeader_logo-js').eq(0);
-
-	// home
 	var mainContent = $('.mainContent-js').eq(0);
-	var atf = $('.home_atf-js').eq(0);
+	
+	var Common = (function() {
+		return {
+			init: function() {
+				new WOW().init();
+				focuspoint.focusPoint();
 
-	// private functions here	
-	function onScroll() {
-		if (win.scrollTop() >= 400) {
-			headerLogo.fadeIn('fast');
-		} else {
-			headerLogo.fadeOut('fast');
+				if (currentPage !== 'home') {
+					headerLogo.show();
+				}
+			}
+		};
+	})();
+
+	var Home = (function() {
+		var atf = $('.home_atf-js').eq(0);
+
+		function setAtfHeight() {
+			var topMargin = parseInt(mainContent.css('margin-top'));
+			atf.height(win.height() - topMargin);
 		}
-		return false;
-	}
 
-	function setAtfHeight() {
-		var topMargin = parseInt(mainContent.css('margin-top'));
-		atf.height(win.height() - topMargin);
-	}
+		function onScroll() {
+			if (win.scrollTop() >= 400) {
+				headerLogo.fadeIn('fast');
+			} else {
+				headerLogo.fadeOut('fast');
+			}
+			return false;
+		}
+
+		return {
+			init: function() {
+				setAtfHeight();
+				win.resize(setAtfHeight);
+
+				onScroll();
+				win.scroll(onScroll);
+			}
+		};
+	})();
+
+	var About = (function() {
+		return {
+			init: function() {
+				
+			}
+		};
+	})();
 
 	return {
 		init: function() {
-			new WOW().init();
+			Common.init();
 
-			focuspoint.focusPoint();
-
-			onScroll();
-			win.scroll(onScroll);
-
-			setAtfHeight();
-			win.resize(setAtfHeight);
+			switch(currentPage) {
+				case 'home': {
+					Home.init();
+					break;
+				}
+				case 'about': {
+					About.init();
+					break;
+				}
+			}
 		}
 	};
 })(jQuery.noConflict());
