@@ -9,9 +9,13 @@
 	right: 20px;
 }
 .mainFooter_copy {
-	padding-top: 30px;
+	margin-top: 30px;
 }
 
 .home_solutions .solution {
 	font-size: 0.9em;
+}
+
+.about_team .people {
+	margin: 10px auto;
 }

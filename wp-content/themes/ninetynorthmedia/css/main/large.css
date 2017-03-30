@@ -12,12 +12,18 @@
 	margin-left: 25px;
 }
 
-.mainFooter {
-	padding: 20px 60px;
+.mainFooter_contact {
+	padding: 20px 60px 0 60px;
 }
+
 .mainFooter_social {
+	top: 20px;
 	right: 60px;
 }
 .mainFooter_social i {
 	margin: 0 0 0 10px;
+}
+
+.about {
+	padding: 60px 0;
 }

@@ -9,7 +9,23 @@
 .mainContent {
 	margin-top: 82px;
 }
+.mainFooter_contact {
+	padding-bottom: 0;
+}
+.mainFooter_social {
+	padding: 0;
+}
 
 .home_moreProducts {
 	text-align: right;
+}
+
+.about_whatWeDo_text {
+	text-align: left;
+}
+.about_info {
+	padding: 60px 0 20px 0;
+}
+.about_info_coreValues {
+	padding: 0;
 }

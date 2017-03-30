@@ -12,7 +12,10 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-5">
-					<img class="img-fluid" src="<?php echo get_template_directory_uri() . "/assets/images/tower-bg2.jpg" ?>" />
+					<img 
+						class="img-fluid about_whatWeDo_photo" 
+						src="<?php echo get_template_directory_uri() . "/assets/images/tower-bg2.jpg" ?>" 
+					/>
 				</div>
 				<div class="col-md-7">
 					<div class="about_whatWeDo_text">
@@ -33,6 +36,50 @@
 							professional <span>engineering and production team</span> provides application technical support, project management and design 
 							in solutions for their customers including start-ups.
 						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pageSection about_info">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<h2 class="about_info_title">Core Values</h2>
+					<?php
+						$values = [
+							'Non-discriminating',
+							'Organized',
+							'Reliable',
+							'Technologically Equipped / Transparent',
+							'Hardworking',
+							'Morally Upright',
+							'Excellent',
+							'Diligent',
+							'Innovative',
+							'Accountable'
+						];
+					?>
+					<div class="about_info_coreValues">
+						<?php foreach($values as $v) : ?>
+							<div>
+								<span><?php echo substr($v, 0, 1); ?></span><?php echo substr($v, 1); ?>
+							</div>
+						<?php endforeach; ?>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<h2 class="about_info_title">Mission</h2>
+					<div class="about_info_desc">
+						To be the industry’s benchmark of content building and technology provider 
+						that offers adaptive and cost-effective solutions to bring out the potentials 
+						of the consumers and together, build value.
+					</div>
+					<h2 class="about_info_title">Vision</h2>
+					<div class="about_info_desc">
+						Bridging technological advancement to meet the demands of its clientele who 
+						desire limitless information possibilities.
 					</div>
 				</div>
 			</div>
@@ -63,40 +110,41 @@
 		<div class="container">
 			<div class="row">
 				<?
-					foreach($people as $p) :
+					$args = [
+						'post_type' => 'people',
+						'nopaging' => true
+					];
+
+					$people = new WP_Query($args);
 				?>
-					<div class="col-sm-6 col-md-3 col-lg-3">
+				<?php if($people->have_posts()) : while($people->have_posts()) : $people->the_post(); ?>
+					<div class="col-sm-6 col-md-4 col-lg-3">
 						<div class="people">
 							<div 
 								class="people_photo focuspoint"
 								data-focus-x="0"
 								data-focus-y="0"
 							>
-								<img src="<?php echo get_template_directory_uri() . "/assets/images/default-photo.jpg"; ?>" />
+								<?php if (has_post_thumbnail()) : ?>
+									<?php $featureImage = get_the_post_thumbnail_url(); ?>
+									<img src="<?php echo $featureImage; ?>" />
+								<?php else : ?>
+									<img src="<?php echo get_template_directory_uri() . "/assets/images/default-photo.jpg"; ?>" />
+								<?php endif; ?>
 							</div>
 							<div class="people_desc">
 								<div class="people_desc_name">
-									<?php echo $p['name']; ?>
+									<?php the_title(); ?>
 								</div>
 								<div class="people_desc_position">
-									<?php echo $p['position']; ?>
+									<?php the_field('position'); ?>
 								</div>
 							</div>
 						</div>
 					</div>
-				<?php
-					endforeach;
-				?>
+				<?php endwhile; endif; ?>
 			</div>
 		</div>
-	</div>
-
-	<div class="pageSection about_missionVision">
-		<h2 class="pageSection_title">Mission &amp; Vision</h2>
-	</div>
-
-	<div class="pageSection about_coreValues">
-		<h2 class="pageSection_title">Core Values</h2>
 	</div>
 
 	<div class="pageSection about_partners">

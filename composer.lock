@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ce2dde366495f8ae4c8ffdb45f7f3cdf",
-    "content-hash": "1956f74b99f7a546eb81bdc2c11edcae",
+    "hash": "395887677535e32c4052efe36a57c079",
+    "content-hash": "cee8a0629069192b0c40332c19d64e04",
     "packages": [
         {
             "name": "composer/installers",
@@ -157,6 +157,27 @@
             "time": "2016-10-17 19:10:24"
         },
         {
+            "name": "wpackagist-plugin/post-types-order",
+            "version": "dev-trunk",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/post-types-order/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/post-types-order.zip?timestamp=1487954209",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/post-types-order/",
+            "time": "2017-02-24 16:36:49"
+        },
+        {
             "name": "wpackagist-plugin/under-construction-page",
             "version": "dev-trunk",
             "source": {
@@ -184,7 +205,8 @@
     "stability-flags": {
         "wpackagist-plugin/custom-post-type-ui": 20,
         "wpackagist-plugin/advanced-custom-fields": 20,
-        "wpackagist-plugin/under-construction-page": 20
+        "wpackagist-plugin/under-construction-page": 20,
+        "wpackagist-plugin/post-types-order": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
