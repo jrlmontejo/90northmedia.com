@@ -62,22 +62,28 @@
 						];
 					?>
 					<div class="about_info_coreValues">
-						<?php foreach($values as $v) : ?>
-							<div>
+						<?php
+							$delay = 0; 
+							foreach($values as $v) : 
+						?>
+							<div class="wow fadeInRight" data-wow-delay="<?php echo $delay . "s"; ?>">
 								<span><?php echo substr($v, 0, 1); ?></span><?php echo substr($v, 1); ?>
 							</div>
-						<?php endforeach; ?>
+						<?php 
+								$delay += 0.1;
+							endforeach; 
+						?>
 					</div>
 				</div>
 				<div class="col-md-6">
 					<h2 class="about_info_title">Mission</h2>
-					<div class="about_info_desc">
+					<div class="about_info_desc wow fadeInRight">
 						To be the industry’s benchmark of content building and technology provider 
 						that offers adaptive and cost-effective solutions to bring out the potentials 
 						of the consumers and together, build value.
 					</div>
 					<h2 class="about_info_title">Vision</h2>
-					<div class="about_info_desc">
+					<div class="about_info_desc wow fadeInRight">
 						Bridging technological advancement to meet the demands of its clientele who 
 						desire limitless information possibilities.
 					</div>
@@ -119,7 +125,7 @@
 				?>
 				<?php if($people->have_posts()) : while($people->have_posts()) : $people->the_post(); ?>
 					<div class="col-sm-6 col-md-4 col-lg-3">
-						<div class="people">
+						<div class="people wow fadeInUp">
 							<div 
 								class="people_photo focuspoint"
 								data-focus-x="0"

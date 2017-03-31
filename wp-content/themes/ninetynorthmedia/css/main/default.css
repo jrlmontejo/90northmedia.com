@@ -262,6 +262,10 @@ a:active {
 	padding: 10px 0;
 	border-top: 1px solid #646567;
 }
+.mainFooter_copy-plain {
+	border: 0;
+	margin-top: 0;
+}
 
 /* Misc */
 
@@ -547,6 +551,7 @@ a:active {
 /* About page */
 
 .about {
+	padding: 25px 0;
 }
 .about_whatWeDo_photo {
 	margin-bottom: 40px;
@@ -607,6 +612,7 @@ a:active {
 }
 .about_info_title {
 	margin-bottom: 40px;
+	text-align: center;
 }
 .about_info_desc {
 	margin-bottom: 40px;
@@ -621,5 +627,28 @@ a:active {
 	color: #D92935;
 	font-weight: bold;
 	font-size: 1.3em;
+}
+
+.about_team {
+	margin-bottom: 90px;
+}
+
+.about_partners {
+	background-color: #F7F7F7;
+	min-height: 0;
+}
+.about_clients {
+	background-color: #F7F7F7;
+	min-height: 0;
+}
+
+.contact {
+	padding: 25px 0 0 0;
+}
+
+.contact_map {
+	width: 100%;
+	height: 400px;
+	background-color: #DBDBDB;
 }
 

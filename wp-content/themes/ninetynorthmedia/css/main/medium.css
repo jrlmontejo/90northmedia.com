@@ -26,6 +26,9 @@
 .about_info {
 	padding: 60px 0 20px 0;
 }
+.about_info_title {
+	text-align: left;
+}
 .about_info_coreValues {
 	padding: 0;
 }
