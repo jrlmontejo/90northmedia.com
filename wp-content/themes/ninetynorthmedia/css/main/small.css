@@ -1,19 +1,19 @@
 /* Small devices */
 
-.mainFooter {
-	position: relative;
-}
-.mainFooter_social {
-	position: absolute;
-	top: 20px;
-	right: 20px;
-}
 .mainFooter_copy {
 	margin-top: 30px;
 }
 .mainFooter_copy-plain {
 	border: 0;
 	margin-top: 0;
+}
+
+.mainFooter_social_info {
+	text-align: right;
+}
+.mainFooter_social_info i {
+	float: right;
+	margin-left: 20px;
 }
 
 .home_solutions .solution {

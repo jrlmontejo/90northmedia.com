@@ -230,18 +230,26 @@ var App = (function($) {
 		var mapBox = $('#map');
 		var map, marker;
 
+		function removeMapStyles() {
+			if (map) {
+				map.set('styles', []);
+			}
+		}
+
+		function addMapStyles() {
+			if (map) {
+				map.set('styles', mapStyles);
+			}
+		}
+
 		return {
 			init: function() {
 				mapBox.on('mouseenter', function() {
-					if (map) {
-						map.set('styles', []);
-					}
+					removeMapStyles();
 				});
 
 				mapBox.on('mouseleave', function() {
-					if (map) {
-						map.set('styles', mapStyles);
-					}
+					addMapStyles();
 				});
 			},
 			initMap: function() {

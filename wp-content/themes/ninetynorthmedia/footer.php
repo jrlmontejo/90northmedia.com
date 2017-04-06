@@ -3,27 +3,34 @@
 		
 		<footer id="footer" class="mainFooter">
 			<?php if ($pagename != 'contact-us') : ?>
+				<?php global $officeInfo; ?>
 				<div class="mainFooter_contact">
 					<div class="mainFooter_contact_info mainFooter_contact_info_1">
 						<i class="fa fa-map-marker fa-lg fa-fw"></i>
-						<span>509 Emerald Court Bldg., 54 Road 3, QC, PH 1100</span>
+						<span><?php echo $officeInfo['address']; ?></span>
 					</div>
 					<div class="mainFooter_contact_info mainFooter_contact_info_2">
 						<i class="fa fa-envelope fa-lg fa-fw"></i>
-						<span>info@90northmedia.com</span>
+						<span><?php echo $officeInfo['email']; ?></span>
 					</div>
 					<div class="mainFooter_contact_info mainFooter_contact_info_3">
 						<i class="fa fa-phone fa-lg fa-fw"></i>
-						<span>(02) 959 6837</span>
+						<span><?php echo $officeInfo['phone']; ?></span>
 					</div>
 				</div>
 				<div class="mainFooter_social">
-					<a href="//www.facebook.com/90degreesnorth/" target="_blank">
-						<i class="fa fa-facebook fa-lg fa-fw"></i>
-					</a>
-					<a href="//www.linkedin.com/company/90-degrees-north-inc-" target="_blank">
-						<i class="fa fa-linkedin-square fa-lg fa-fw"></i>
-					</a>
+					<div class="mainFooter_social_info">
+						<a href="<?php echo '//facebook.com' . $officeInfo['facebook']; ?>" target="_blank">
+							<i class="fa fa-facebook fa-lg fa-fw"></i>
+							<span><?php echo $officeInfo['facebook']; ?></span>
+						</a>
+					</div>
+					<div class="mainFooter_social_info">
+						<a href="<?php echo '//linkedin.com' . $officeInfo['linkedin']; ?>" target="_blank">
+							<i class="fa fa-linkedin-square fa-lg fa-fw"></i>
+							<span><?php echo $officeInfo['linkedin']; ?></span>
+						</a>
+					</div>
 				</div>
 			<?php endif; ?>
 			<div 

@@ -1,4 +1,8 @@
 /* Medium devices */
+.bttn {
+	display: inline-block;
+	width: auto;
+}
 
 .mobileHeader {
 	display: none;
@@ -7,13 +11,29 @@
 	display: block;
 }
 .mainContent {
-	margin-top: 82px;
+	margin-top: 84px;
+}
+
+.mainFooter {
+	position: relative;
+}
+.mainFooter_social {
+	position: absolute;
+	top: 20px;
+	right: 20px;
 }
 .mainFooter_contact {
 	padding-bottom: 0;
 }
 .mainFooter_social {
 	padding: 0;
+}
+.mainFooter_social_info {
+	text-align: right;
+}
+.mainFooter_social_info i {
+	float: right;
+	margin-left: 20px;
 }
 
 .home_moreProducts {

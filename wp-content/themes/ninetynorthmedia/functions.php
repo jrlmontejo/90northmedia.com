@@ -1,5 +1,13 @@
 <?php
 
+$officeInfo = [
+	'address' => '509 Emerald Court Bldg., 54 Road 3, QC, PH 1100',
+	'email' => 'info@90northmedia.com',
+	'phone' => '(02) 959 6837',
+	'facebook' => '/90degreesnorth',
+	'linkedin' => '/company/90-degrees-north-inc-'
+];
+
 function ninetynorthmedia_setup() {
 	load_theme_textdomain( 'ninetynorthmedia', get_template_directory() . '/languages' );
 	add_theme_support( 'title-tag' );
