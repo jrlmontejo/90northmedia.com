@@ -6,7 +6,7 @@
 
 <?php get_header(); ?>
 
-<section data-id="home" id="content" role="main" class="home">	
+<section data-id="home" id="content" role="main" class="home">
 	<div class="home_atf home_atf-js">
 		<!-- <canvas id="myCanvas" resize></canvas> -->
 		<!-- <div class='home_atf_pulse'> -->
@@ -75,8 +75,8 @@
 				<img class="img-fluid" src="<?php echo get_template_directory_uri() . "/assets/images/logo.png" ?>" />
 			</div>
 			<div class="home_atf_header_caption">
-				We are a company engaged in <span>TV Production</span>, <span>Film</span>, <span>Rentals</span>, 
-				<span>Distributorships / Representatives</span> and <span>System Integration</span>. 
+				We are a company engaged in <span>TV Production</span>, <span>Film</span>, <span>Rentals</span>,
+				<span>Distributorships / Representatives</span> and <span>System Integration</span>.
 				With Partners and Principals across the USA, Europe and Asia Pacific.
 			</div>
 		</div>
@@ -118,13 +118,13 @@
 		?>
 		<div class="container">
 			<div class="row decPadding">
-				<?php 
+				<?php
 					$delay = 0;
-					foreach($solutions as $solution) : 
+					foreach($solutions as $solution) :
 				?>
 					<div class="col-xs-12 col-md-4 wow fadeInLeft" data-wow-delay="<?php echo $delay . "s"; ?>">
 						<div class="solution">
-							<div 
+							<div
 								class="solution_image focuspoint"
 								data-focus-x="0"
 								data-focus-y="0"
@@ -143,9 +143,9 @@
 							</div>
 						</div>
 					</div>
-				<?php 
+				<?php
 						$delay += 0.1;
-					endforeach; 
+					endforeach;
 				?>
 			</div>
 		</div>
@@ -178,17 +178,17 @@
 				?>
 					<div class="col-xs-12 decPadding">
 						<div class="product product-first">
-							<div 
+							<div
 								class="product_photo"
 								style="<?php echo "background-image: " . $photoOverlayBg . ", url('" . $photoUrl . "')" ?>"
 							>
 							</div>
 							<div class="product_overlay product-first_overlay">
 								<div class="product_name">
-									<?php echo $product['name']; ?>	
+									<?php echo $product['name']; ?>
 								</div>
 								<div class="product_desc">
-									<?php echo $product['desc']; ?>	
+									<?php echo $product['desc']; ?>
 								</div>
 							</div>
 						</div>
@@ -196,24 +196,24 @@
 				<?php else : ?>
 					<div class="col-xs-12 col-sm-6 decPadding">
 						<div class="product">
-							<div 
+							<div
 								class="product_photo"
 								style="<?php echo "background-image: " . $photoOverlayBg . ", url('" . $photoUrl . "')" ?>"
 							>
 							</div>
 							<div class="product_overlay">
 								<div class="product_name">
-									<?php echo $product['name']; ?>	
+									<?php echo $product['name']; ?>
 								</div>
 								<div class="product_desc">
-									<?php echo $product['desc']; ?>	
+									<?php echo $product['desc']; ?>
 								</div>
 							</div>
 						</div>
 					</div>
-				<?php 
+				<?php
 						endif;
-					endforeach; 
+					endforeach;
 				?>
 			</div>
 			<div class="row decPadding">
@@ -245,7 +245,7 @@
 				<?php if($news->have_posts()) : while($news->have_posts()) : $news->the_post(); ?>
 					<div class="col-md-4">
 						<div class="news wow fadeIn" data-wow-delay="<?php echo $delay . "s"; ?>">
-							<div 
+							<div
 								class="news_thumb focuspoint"
 								data-focus-x="0"
 								data-focus-y="0"
@@ -254,7 +254,7 @@
 								<img src="<?php echo $featureImage; ?>" />
 							</div>
 							<div class="news_title">
-								<?php the_title(); ?>	
+								<?php the_title(); ?>
 							</div>
 							<div class="news_date">
 								<?php echo get_the_date(); ?>
@@ -267,10 +267,10 @@
 							</div>
 						</div>
 					</div>
-				<?php 
+				<?php
 							$delay += 0.1;
-						endwhile; 
-					endif; 
+						endwhile;
+					endif;
 				?>
 			</div>
 		</div>
@@ -290,7 +290,7 @@
 	</div>
 
 	<div class="pageSection home_partners">
-		<h2 class="pageSection_title">Partners</h2>
+		<h2 class="pageSection_title">Major Partners</h2>
 		<div class="container-fluid">
 			<div class="row">
 				<?php
@@ -311,7 +311,7 @@
 						</a>
 					</div>
 				<?php
-					endforeach; 
+					endforeach;
 				?>
 			</div>
 		</div>
@@ -338,8 +338,8 @@
 							<img class="img-fluid" src="<?php echo get_template_directory_uri() . "/assets/images/clients/" . $client . ".png" ?>" />
 						</a>
 					</div>
-				<?php 
-					endforeach; 
+				<?php
+					endforeach;
 				?>
 			</div>
 		</div>

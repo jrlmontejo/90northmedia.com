@@ -107,7 +107,7 @@
 				?>
 				<?php if($people->have_posts()) : while($people->have_posts()) : $people->the_post(); ?>
 					<div class="col-sm-6 col-md-4 col-lg-3">
-						<div class="people wow fadeInUp">
+						<div class="box people wow fadeInUp">
 							<div
 								class="people_photo focuspoint"
 								data-focus-x="0"

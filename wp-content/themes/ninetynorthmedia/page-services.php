@@ -12,19 +12,8 @@
     <h2 class="pageSection_title">Services</h2>
     <div class="container">
       <div class="row">
-        <div class="col-md-5">
-          <img
-            class="img-fluid about_whatWeDoPhoto"
-            src="<?php echo get_template_directory_uri() . "/assets/images/tower-bg2.jpg" ?>"
-          />
-        </div>
-        <div class="col-md-7">
-          <div class="about_whatWeDoText">
-            <p>
-              We are a company engaged in <span>TV Production</span>, <span>Film</span>, <span>Rentals</span>,
-              <span>Distributorships / Representatives</span> and <span>System Integration</span>.
-              With Partners and Principals across the USA, Europe and Asia Pacific.
-            </p>
+        <div class="col-xs-12">
+          <div class="services_introText">
             <p>
               By providing tailored solutions, supplying standard and state-of-the-art equipment, design &amp; engineering services,
               we have become a strategic supplier, business partner, and technical reference in the Philippine market for all major
@@ -37,6 +26,43 @@
               professional <span>engineering and production team</span> provides application technical support, project management and design
               in solutions for their customers including start-ups.
             </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="pageSection services_entries">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="panel services_entry">
+            <div class="panel_content">
+              <h2 class="panel_title">Technical</h2>
+              <div class="panel_desc">
+                <p>
+                  We are a company engaged in <span>TV Production</span>, <span>Film</span>, <span>Rentals</span>,
+                  <span>Distributorships / Representatives</span> and <span>System Integration</span>.
+                  With Partners and Principals across the USA, Europe and Asia Pacific.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="panel services_entry">
+            <div class="panel_content">
+              <h2 class="panel_title">Film and Production</h2>
+              <div class="panel_desc">
+                <p>
+                  We successfully distribute and represent many of the renowned global brands. Our dynamic, experienced and highly
+                  professional <span>engineering and production team</span> provides application technical support, project management and design
+                  in solutions for their customers including start-ups.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

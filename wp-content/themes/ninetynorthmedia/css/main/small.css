@@ -23,3 +23,8 @@
 .about_team .people {
 	margin: 15px auto;
 }
+
+.box_info {
+  overflow-x: auto;
+  white-space: nowrap;
+}

@@ -64,6 +64,56 @@ p span {
 	border: 0;
 }
 
+/* Panel component */
+
+.panel {
+	border: 1px solid #F7F7F7;
+	margin: 15px 0;
+}
+.panel_title {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.panel_content {
+	padding: 15px;
+}
+.panel_append {
+	background-color: #F7F7F7;
+	padding: 15px;
+}
+
+/* Box component */
+
+.box {
+	box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.2);
+	border: 1px solid #F7F7F7;
+	margin-bottom: 15px;
+	max-width: 250px;
+	margin: 20px auto;
+}
+.box_title {
+	font-size: 1.2em;
+}
+.box_content {
+	background-color: white;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+.box_info {
+	background-color: white;
+	padding: 10px;
+	color: #242424;
+	border-top: 1px solid #F7F7F7;
+}
+.box_desc {
+	font-size: 0.8em;
+}
+.box_link {
+	padding-top: 15px;
+	color: #D92935;
+}
+
 .mobileHeader {
 
 }
@@ -529,14 +579,11 @@ p span {
 	margin-bottom: 40px;
 }
 .about_whatWeDoText {
-	text-align: center;
+	text-align: justify;
 }
 .about_team .people {
 	max-width: 250px;
-	margin: 20px auto;
 	text-align: center;
-	border: 1px solid #F7F7F7;
-	box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.2);
 }
 .about_team .people_photo {
 	height: 200px;
@@ -638,6 +685,10 @@ p span {
 .services {
 	padding: 25px 0;
 }
+.services_introText {
+	text-align: justify;
+}
+
 
 /* Solutions */
 .solutions {
@@ -655,6 +706,7 @@ p span {
 }
 .solutions_entry .box_content {
 	height: 150px;
+	border: 10px solid white;
 }
 
 .solutions_entry-broadcasting {
@@ -662,57 +714,6 @@ p span {
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;*/
-}
-
-/* Panel component */
-
-.panel {
-	border: 1px solid #F7F7F7;
-	margin: 15px 0;
-}
-.panel_title {
-	margin-top: 15px;
-	margin-bottom: 15px;
-}
-.panel_content {
-	padding: 15px;
-}
-.panel_append {
-	background-color: #F7F7F7;
-	padding: 15px;
-}
-
-/* Box component */
-
-.box {
-	box-shadow: 5px 5px 25px 0px rgba(46,61,73,0.2);
-	border: 1px solid #F7F7F7;
-	margin-bottom: 15px;
-}
-.box_title {
-	font-size: 1.2em;
-}
-.box_content {
-	background-color: white;
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-	border: 10px solid white;
-}
-.box_info {
-	overflow-x: auto;
-	white-space: nowrap;
-	background-color: white;
-	padding: 10px;
-	color: #242424;
-	border-top: 1px solid #F7F7F7;
-}
-.box_desc {
-	font-size: 0.8em;
-}
-.box_link {
-	padding-top: 15px;
-	color: #D92935;
 }
 
 /* Contact page */
