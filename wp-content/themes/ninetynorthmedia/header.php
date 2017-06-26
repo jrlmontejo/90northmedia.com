@@ -17,21 +17,21 @@
 		<?php wp_head(); ?>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 	</head>
-	
+
 	<body <?php body_class(); ?>>
 		<div class="wrapper">
 			<header id="header" role="banner">
 				<div class="mobileHeader">
 					<input id="navbarCheck" type="checkbox" class="mobileHeader_check">
 					<div class="mobileHeader_navbar">
-						<label for="navbarCheck" class="mobileHeader_navbar_toggle">
-							<div class="mobileHeader_navbar_toggle_bar"></div>
+						<label for="navbarCheck" class="mobileHeader_navbarToggle">
+							<div class="mobileHeader_navbarToggleIcon"></div>
 						</label>
-						<div class="mobileHeader_navbar_active">
+						<div class="mobileHeader_activeNav">
 							<?php echo get_the_title(); ?>
 						</div>
 					</div>
-					<?php 
+					<?php
 						wp_nav_menu([
 							'theme_location' => 'main-menu',
 							'container_class' => 'mobileHeader_menu'
@@ -44,14 +44,14 @@
 							<img class="img-fluid" src="<?php echo get_template_directory_uri() . "/assets/images/logo.png" ?>" />
 						</a>
 					</div>
-				
-					<?php 
+
+					<?php
 						wp_nav_menu([
 							'theme_location' => 'main-menu',
 							'container_class' => 'mainHeader_menu'
-						]); 
+						]);
 					?>
 				</div>
 			</header>
-		
+
 			<div id="container" class="mainContent mainContent-js">
