@@ -20,15 +20,21 @@
 				</div>
 				<div class="mainFooter_social">
 					<div class="mainFooter_socialInfo">
+						<a href="<?php echo '//linkedin.com' . $officeInfo['linkedin']; ?>" target="_blank">
+							<i class="fa fa-linkedin-square fa-lg fa-fw"></i>
+							<span><?php echo $officeInfo['linkedin']; ?></span>
+						</a>
+					</div>
+					<div class="mainFooter_socialInfo">
 						<a href="<?php echo '//facebook.com' . $officeInfo['facebook']; ?>" target="_blank">
 							<i class="fa fa-facebook fa-lg fa-fw"></i>
 							<span><?php echo $officeInfo['facebook']; ?></span>
 						</a>
 					</div>
 					<div class="mainFooter_socialInfo">
-						<a href="<?php echo '//linkedin.com' . $officeInfo['linkedin']; ?>" target="_blank">
-							<i class="fa fa-linkedin-square fa-lg fa-fw"></i>
-							<span><?php echo $officeInfo['linkedin']; ?></span>
+						<a href="<?php echo '//messenger.com/t/' . $officeInfo['messenger']; ?>" target="_blank">
+							<i class="fa fa-temp-messenger fa-lg fa-fw"></i>
+							<span><?php echo '@' . $officeInfo['messenger']; ?></span>
 						</a>
 					</div>
 				</div>

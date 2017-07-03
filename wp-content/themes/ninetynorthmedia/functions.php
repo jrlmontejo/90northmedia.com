@@ -5,6 +5,7 @@ $officeInfo = [
 	'email' => 'info@90northmedia.com',
 	'phone' => '(02) 959 6837',
 	'facebook' => '/90degreesnorth',
+	'messenger' => '90degreesnorth',
 	'linkedin' => '/company/90-degrees-north-inc-'
 ];
 
@@ -13,19 +14,19 @@ function ninetynorthmedia_setup() {
 	add_theme_support( 'title-tag' );
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
-	
+
 	global $content_width;
 	if ( ! isset( $content_width ) ) $content_width = 640;
-	
+
 	register_nav_menus([
-		'main-menu' => __( 'Main Menu', 'ninetynorthmedia' ) 
+		'main-menu' => __( 'Main Menu', 'ninetynorthmedia' )
 	]);
 }
 add_action( 'after_setup_theme', 'ninetynorthmedia_setup' );
 
 function ninetynorthmedia_enqueue_comment_reply_script() {
-	if ( get_option( 'thread_comments' ) ) { 
-		wp_enqueue_script( 'comment-reply' ); 
+	if ( get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
 	}
 }
 add_action( 'comment_form_before', 'ninetynorthmedia_enqueue_comment_reply_script' );
@@ -55,16 +56,16 @@ add_action( 'widgets_init', 'ninetynorthmedia_widgets_init' );
 function ninetynorthmedia_custom_pings( $comment ) {
 	$GLOBALS['comment'] = $comment;
 
-?>	
+?>
 	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID(); ?>"><?php echo comment_author_link(); ?></li>
-<?php 
+<?php
 }
 
 function ninetynorthmedia_comments_number( $count ) {
 	if ( !is_admin() ) {
 		global $id;
 		$comments_by_type = &separate_comments( get_comments( 'status=approve&post_id=' . $id ) );
-		
+
 		return count( $comments_by_type['comment'] );
 	}
 

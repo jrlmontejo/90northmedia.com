@@ -7,7 +7,7 @@
 		"uuidString": "2329B761-2119-4CE2-A524-B16289BA493E"
 		}
 	],
-"creatorBuild": "25813",
+"creatorBuild": "25849",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -8630,6 +8630,12 @@
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/page-home.php",
 		"oF": 0
 		},
+	"\/wp-content\/themes\/ninetynorthmedia\/page-quote.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/page-quote.php",
+		"oF": 0
+		},
 	"\/wp-content\/themes\/ninetynorthmedia\/page-services.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -16924,6 +16930,7 @@
 		},
 	"languageDefaultsUserDefined": [
 		],
+	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "source",

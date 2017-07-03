@@ -110,3 +110,10 @@
 .about_infoCoreValues {
 	padding: 0;
 }
+
+.quote_form textarea {
+	height: 256px;
+}
+.quote_submit {
+	float: right;
+}

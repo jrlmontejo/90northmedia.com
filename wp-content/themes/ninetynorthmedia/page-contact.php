@@ -17,6 +17,10 @@
 					<h2 class="pageSection_title">
 						Leave Us A Message
 					</h2>
+					<div class="contact_other contact_other-quote">
+						Are you requesting for a quote? Head over to
+						<a target="_blank" href="/request-a-quote">Request a Quote</a> page instead.
+					</div>
 					<div class="contact_form">
 						<?php echo do_shortcode('[contact-form-7 id="88" title="Contact Us"]'); ?>
 					</div>
@@ -39,16 +43,22 @@
 						<?php echo $officeInfo['phone'] ?>
 					</div>
 					<div class="contact_other contact_other-social">
-						<div class="social_fb">
+						<div class="social_info">
+							<a href="<?php echo '//linkedin.com' . $officeInfo['linkedin']; ?>" target="_blank">
+								<i class="fa fa-linkedin-square fa-lg fa-fw"></i>
+								<?php echo $officeInfo['linkedin']; ?>
+							</a>
+						</div>
+						<div class="social_info">
 							<a href="<?php echo '//facebook.com' . $officeInfo['facebook']; ?>" target="_blank">
 								<i class="fa fa-facebook-square fa-lg fa-fw"></i>
 								<?php echo $officeInfo['facebook']; ?>
 							</a>
 						</div>
-						<div class="social_linkedin">
-							<a href="<?php echo '//linkedin.com' . $officeInfo['linkedin']; ?>" target="_blank">
-								<i class="fa fa-linkedin-square fa-lg fa-fw"></i>
-								<?php echo $officeInfo['linkedin']; ?>
+						<div class="social_info">
+							<a href="<?php echo '//messenger.com/t/' . $officeInfo['messenger']; ?>" target="_blank">
+								<i class="fa fa-temp-messenger-black fa-lg fa-fw"></i>
+								<?php echo '@' . $officeInfo['messenger']; ?>
 							</a>
 						</div>
 					</div>

@@ -27,3 +27,7 @@
 .panel_append {
   padding: 30px;
 }
+
+.quote_form textarea {
+  height: 222px;
+}
