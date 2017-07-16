@@ -7,7 +7,7 @@ var App = (function($) {
 
 	var headerLogo = $('.mainHeader_logo-js').eq(0);
 	var mainContent = $('.mainContent-js').eq(0);
-	
+
 	var Common = (function() {
 		return {
 			init: function() {
@@ -23,6 +23,9 @@ var App = (function($) {
 
 	var Home = (function() {
 		var atf = $('.home_atf-js').eq(0);
+		var productTitle = $('.featuredProduct .box_title');
+		var productDesc = $('.featuredProduct .box_desc');
+		var productLink = $('.featuredProduct .box_link');
 
 		function setAtfHeight() {
 			var topMargin = parseInt(mainContent.css('margin-top'));
@@ -38,6 +41,18 @@ var App = (function($) {
 			return false;
 		}
 
+		function initProductSlider() {
+			$('#lightSlider').lightSlider({
+				adaptiveHeight: true
+			});
+		}
+
+		function clampBoxContent() {
+			productTitle.truncate({ lines: 2 });
+			productDesc.truncate({ lines: 2 });
+			productLink.truncate({ lines: 1 });
+		}
+
 		return {
 			init: function() {
 				setAtfHeight();
@@ -45,14 +60,57 @@ var App = (function($) {
 
 				onScroll();
 				win.scroll(onScroll);
+
+				initProductSlider();
+
+				clampBoxContent();
+				win.resize(clampBoxContent);
+			}
+		};
+	})();
+
+	var Solutions = (function() {
+		var boxTitle = $('.solutions_entry .box_title');
+		var boxDesc = $('.solutions_entry .box_desc');
+		var boxLink = $('.solutions_entry .box_link');
+
+		function clampBoxContent() {
+			boxTitle.truncate({ lines: 1 });
+			boxDesc.truncate({ lines: 2 });
+			boxLink.truncate({ lines: 1 });
+		}
+
+		return {
+			init: function() {
+				clampBoxContent();
+				win.resize(clampBoxContent);
+			}
+		};
+	})();
+
+	var Services = (function() {
+		return {
+			init: function() {
+
 			}
 		};
 	})();
 
 	var About = (function() {
+		var gallery = $('#aboutGallery');
+
+		function initGallery() {
+			var p = gallery.portfolio({
+				loop: true,
+				height: '350px',
+				showArrows: false
+			});
+			p.init();
+		}
+
 		return {
 			init: function() {
-				
+				initGallery();
 			}
 		};
 	})();
@@ -287,6 +345,14 @@ var App = (function($) {
 				}
 				case 'contact': {
 					Contact.init();
+					break;
+				}
+				case 'solutions': {
+					Solutions.init();
+					break;
+				}
+				case 'services': {
+					Services.init();
 					break;
 				}
 			}

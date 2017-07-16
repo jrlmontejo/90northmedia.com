@@ -10,15 +10,33 @@
 
 	<div class="pageSection about_whatWeDo">
 		<h2 class="pageSection_title">What We Do</h2>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="about_fade">
+						<div id="aboutGallery">
+							<?php
+								$args = [
+									'post_type' => 'attachment',
+									'post_mime_type' => 'image',
+									'post_status' => 'inherit',
+									'posts_per_page' => -1,
+									'category_name' => 'company-photos'
+								];
+
+								$images = new WP_Query($args);
+							?>
+							<?php if($images->have_posts()) : while($images->have_posts()) : $images->the_post(); ?>
+								<img data-src="<?php echo wp_get_attachment_url($images->ID); ?>" />
+							<?php endwhile; endif; ?>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-5">
-					<img
-						class="img-fluid about_whatWeDoPhoto"
-						src="<?php echo get_template_directory_uri() . "/assets/images/tower-bg2.jpg" ?>"
-					/>
-				</div>
-				<div class="col-md-7">
+				<div class="col-xs-12">
 					<div class="about_whatWeDoText">
 						<p>
 							We are a company engaged in <span>TV Production</span>, <span>Film</span>, <span>Rentals</span>,

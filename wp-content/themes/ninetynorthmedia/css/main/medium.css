@@ -110,10 +110,26 @@
 .about_infoCoreValues {
 	padding: 0;
 }
+.about_fade:before {
+  width: 55px;
+}
+.about_fade:after {
+  width: 55px;
+}
 
 .quote_form textarea {
 	height: 256px;
 }
 .quote_submit {
-	float: right;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.solutions_category .panel_desc,
+.services_category .panel_desc {
+	max-width: 600px;
+}
+
+.services_category .panel_title {
+	margin-bottom: 80px;
 }

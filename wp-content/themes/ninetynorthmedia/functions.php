@@ -80,7 +80,11 @@ function ninetynorthmedia_add_scripts() {
 		"tether"     => '//cdnjs.cloudflare.com/ajax/libs/tether/1.3.7/js/tether.min.js',
 		"bootstrap4" => '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js',
 		"focuspoint" => get_template_directory_uri() . '/js/jquery.focuspoint.min.js',
-		"wow"        => get_template_directory_uri() . '/js/wow.min.js'
+		"wow"        => get_template_directory_uri() . '/js/wow.min.js',
+		"clamp"			 => get_template_directory_uri() . '/js/clamp.min.js',
+		"portfolio"  => get_template_directory_uri() . '/js/portfolio.pack.min.js',
+		"lightslider"  => get_template_directory_uri() . '/js/lightslider.min.js',
+		"truncate" => get_template_directory_uri() . '/js/truncate.min.js'
 		// "paper"      => get_template_directory_uri() . '/js/paper-full.min.js'
 	];
 
@@ -97,7 +101,8 @@ function ninetynorthmedia_add_styles() {
 		"bootstrap4"   => '//maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.5/css/bootstrap.min.css',
 		"font-awesome" => get_template_directory_uri() . '/css/lib/font-awesome.css',
 		"animate"      => get_template_directory_uri() . '/css/lib/animate.css',
-		"focuspoint"   => get_template_directory_uri() . '/css/lib/focuspoint.css'
+		"focuspoint"   => get_template_directory_uri() . '/css/lib/focuspoint.css',
+		"lightslider"   => get_template_directory_uri() . '/css/lib/lightslider.min.css'
 	];
 
 	foreach( $styles as $style_handle => $style_url ) {

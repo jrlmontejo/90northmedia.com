@@ -20,11 +20,28 @@
 	font-size: 0.9em;
 }
 
+.home_products .featuredProduct .box_info {
+	height: 161px;
+	position: relative;
+}
+
 .about_team .people {
 	margin: 15px auto;
 }
 
-.box_info {
-  overflow-x: auto;
-  white-space: nowrap;
+.services_entry .box_info {
+	overflow-y: auto;
+}
+
+.solutions_entry .box_info {
+	height: 130px;
+	position: relative;
+}
+.solutions_entry .box_link,
+.home_products .featuredProduct .box_link {
+	position: absolute;
+	padding: 10px;
+	bottom: 0;
+	left: 0;
+	width: 100%;
 }

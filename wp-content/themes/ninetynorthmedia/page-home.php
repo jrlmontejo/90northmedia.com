@@ -8,222 +8,144 @@
 
 <section data-id="home" id="content" role="main" class="home">
 	<div class="home_atf home_atf-js">
-		<!-- <canvas id="myCanvas" resize></canvas> -->
-		<!-- <div class='home_atf_pulse'> -->
-		 <!--  <svg class="pulse pulse_out_1" xmlns="http://www.w3.org/2000/svg">
-		    <circle class="back" cx="450" cy="450" r="440"/>
-		    <circle class="front" cx="450" cy="450" r="440"/>
-		  </svg>
-
-		  <svg class="pulse pulse_out_2" xmlns="http://www.w3.org/2000/svg">
-		    <circle class="back" cx="450" cy="450" r="440"/>
-		    <circle class="front" cx="450" cy="450" r="440"/>
-		  </svg>
-
-		  <svg class="pulse pulse_out_3" xmlns="http://www.w3.org/2000/svg">
-		    <circle class="back" cx="450" cy="450" r="440"/>
-		    <circle class="front" cx="450" cy="450" r="440"/>
-		  </svg>
-
-		  <svg class="pulse pulse_out_4" xmlns="http://www.w3.org/2000/svg">
-		    <circle class="back" cx="450" cy="450" r="440"/>
-		    <circle class="front" cx="450" cy="450" r="440"/>
-		  </svg> -->
-
-		  <!-- <svg class="pulse pulse_out_5" xmlns="http://www.w3.org/2000/svg">
-		    <circle class="back" cx="450" cy="450" r="440"/>
-		    <circle class="front" cx="450" cy="450" r="440"/>
-		  </svg>
-
-		  <svg class="pulse pulse_out_6" xmlns="http://www.w3.org/2000/svg">
-		    <circle class="back" cx="450" cy="450" r="440"/>
-		    <circle class="front" cx="450" cy="450" r="440"/>
-		  </svg>
-
-		  <svg class="pulse pulse_out_7" xmlns="http://www.w3.org/2000/svg">
-		    <circle class="back" cx="450" cy="450" r="440"/>
-		    <circle class="front" cx="450" cy="450" r="440"/>
-		  </svg>
-
-		  <svg class="pulse pulse_out_8" xmlns="http://www.w3.org/2000/svg">
-		    <circle class="back" cx="450" cy="450" r="440"/>
-		    <circle class="front" cx="450" cy="450" r="440"/>
-		  </svg> -->
-
-		  <!-- <svg class="pulse pulse_out_5" xmlns="http://www.w3.org/2000/svg">
-		    <circle class="back" cx="450" cy="450" r="440"/>
-		    <circle class="front" cx="450" cy="450" r="440"/>
-		  </svg> -->
-
-		  <!-- <svg class="pulse pulse_out_6" xmlns="http://www.w3.org/2000/svg">
-		    <circle class="back" cx="200" cy="200" r="190"/>
-		    <circle class="front" cx="200" cy="200" r="190"/>
-		  </svg>
-
-		  <svg class="pulse pulse_out_7" xmlns="http://www.w3.org/2000/svg">
-		    <circle class="back" cx="200" cy="200" r="190"/>
-		    <circle class="front" cx="200" cy="200" r="190"/>
-		  </svg>
-
-		  <svg class="pulse pulse_out_8" xmlns="http://www.w3.org/2000/svg">
-		    <circle class="back" cx="200" cy="200" r="190"/>
-		    <circle class="front" cx="200" cy="200" r="190"/>
-		  </svg> -->
-		<!-- </div> -->
-		<div class="home_atf_header wow fadeInUp">
-			<div class="home_atf_header_logo">
+		<div class="home_atfHeader wow fadeInUp">
+			<div class="home_atfHeaderLogo">
 				<img class="img-fluid" src="<?php echo get_template_directory_uri() . "/assets/images/logo.png" ?>" />
 			</div>
-			<div class="home_atf_header_caption">
+			<div class="home_atfHeaderCaption">
 				We are a company engaged in <span>TV Production</span>, <span>Film</span>, <span>Rentals</span>,
 				<span>Distributorships / Representatives</span> and <span>System Integration</span>.
 				With Partners and Principals across the USA, Europe and Asia Pacific.
+			</div>
+			<div class="home_atfHeaderMore">
+				<a href="#homePageMore">
+					<span class="fa fa-angle-down fa-4x"></span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<div id="homePageMore"></div>
+
+	<div class="pageSection home_products">
+		<h2 class="pageSection_title">Featured Products</h2>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-xs-12">
+					<ul id="lightSlider">
+						<?php
+							$args = [
+				        'post_type' => 'featured_products',
+				        'posts_per_page' => 10
+				      ];
+
+							$products = new WP_Query($args);
+						?>
+						<?php if($products->have_posts()) : while($products->have_posts()) : $products->the_post(); ?>
+							<li>
+                <div class="box wow fadeInUp featuredProduct">
+                	<a href="<?php echo get_field('product_link'); ?>" target="_blank">
+                    <?php $productPhoto = get_field('photo'); ?>
+                    <div
+                      class="box_content"
+                      style="background-image: url(<?php echo $productPhoto['sizes']['medium']; ?>)">
+                    </div>
+                    <div class="box_info">
+                      <div class="box_title"><?php the_title(); ?></div>
+                      <div id="box1" class="box_desc"><?php echo get_field('description'); ?></div>
+                      <div class="box_link">
+                      	Visit Product Link
+                      	<i class="fa fa-external-link" aria-hidden="true"></i>
+                    	</div>
+                    </div>
+                  </a>
+                </div>
+							</li>
+						<?php endwhile; endif; ?>
+					</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="pageSection home_services">
+		<h2 class="pageSection_title">Services</h2>
+		<div class="container">
+			<div class="row decPadding">
+				<?php
+          $args = [
+            'post_type' => 'service_categories',
+            'posts_per_page' => 3,
+            'post__not_in' => [135]
+          ];
+
+          $delay = 0;
+          $service_categories = new WP_Query($args);
+        ?>
+        <?php if($service_categories->have_posts()) : while($service_categories->have_posts()) : $service_categories->the_post(); ?>
+					<div class="col-lg-4 wow fadeInLeft" data-wow-delay="<?php echo $delay . "s"; ?>">
+            <?php $serviceBg = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large'); ?>
+            <div class="box home_service">
+            	<a href="/services">
+	              <div
+	              	class="box_content"
+	              	style="background-image: url(<?php echo $serviceBg[0]; ?>)"
+	            	>
+	              </div>
+	              <div class="box_info">
+	              	<div class="box_title">
+	                  <?php the_title(); ?>
+	                </div>
+	                <div class="box_desc">
+	                	<?php the_excerpt(); ?>
+	                </div>
+	              </div>
+              </a>
+            </div>
+          </div>
+				<?php $delay += 0.1; endwhile; endif; ?>
 			</div>
 		</div>
 	</div>
 
 	<div class="pageSection home_solutions">
-		<h2 class="pageSection_title">End-to-end Solutions</h2>
-		<?php
-			$solutions = [[
-				'title' => 'Production',
-				'image' => 'production.jpg',
-				'desc' => [
-					'Studio/Remote Solutions',
-					'Production System',
-					'Processing/Editing',
-					'Playback/Playout',
-					'Lighting System'
-				]
-			], [
-				'title' => 'Content Distribution',
-				'image' => 'content-distribution.jpg',
-				'desc' => [
-					'Satellite/DSNG',
-					'Microwave Link',
-					'Fiber Optic Cable',
-					'Open Internet'
-				]
-			], [
-				'title' => 'Transmission',
-				'image' => 'transmission.jpg',
-				'desc' => [
-					'Free TV (Transmitter/Antenna)',
-					'Cable TV',
-					'DTH (Satellite)',
-					'IPTV',
-					'Livestreaming'
-				]
-			]];
-		?>
+		<h2 class="pageSection_title">Solutions</h2>
 		<div class="container">
 			<div class="row decPadding">
 				<?php
-					$delay = 0;
-					foreach($solutions as $solution) :
-				?>
-					<div class="col-xs-12 col-md-4 wow fadeInLeft" data-wow-delay="<?php echo $delay . "s"; ?>">
-						<div class="solution">
-							<div
-								class="solution_image focuspoint"
-								data-focus-x="0"
-								data-focus-y="0"
-							>
-								<img src="<?php echo get_template_directory_uri() . "/assets/images/" . $solution['image']; ?>" />
-							</div>
-							<div class="solution_title">
-								<?php echo $solution['title']; ?>
-							</div>
-							<div class="solution_desc">
-								<ul>
-									<?php foreach($solution['desc'] as $desc) : ?>
-										<li><?php echo $desc; ?></li>
-									<?php endforeach; ?>
-								</ul>
-							</div>
-						</div>
-					</div>
-				<?php
-						$delay += 0.1;
-					endforeach;
-				?>
-			</div>
-		</div>
+					$args = [
+		        'post_type' => 'solution_categories',
+		        'posts_per_page' => 3,
+		        'post__not_in' => [135]
+		      ];
 
-	</div>
-
-	<div class="pageSection home_products">
-		<h2 class="pageSection_title">Featured Products</h2>
-		<div class="container">
-			<div class="row decPadding">
-				<?php
-					$products = [[
-						'name' => 'Spectra T-Series Mid-Range/Enterprise Tape Libraries',
-						'src' => 'storage2.png',
-						'desc' => 'Designed for Growth and Scalability'
-					], [
-						'name' => 'Hitachi EC700-HP LPTV Transmitter',
-						'src' => 'transmitter2.jpg',
-						'desc' => 'High efficiency Doherty, rugged, air cooled platform for broadcast requirements'
-					], [
-						'name' => 'Wohler iAM-VIDEO-2 Multichannel Audio Video Monitor',
-						'src' => 'audio monitor2.jpg',
-						'desc' => 'Easy Operation with High-Quality, Intuitive Monitoring'
-					]];
-
-					foreach($products as $i => $product) :
-						$photoOverlayBg = "linear-gradient(rgba(0, 0, 0, 0.1),rgba(0, 0, 0, 0.1))";
-						$photoUrl = get_template_directory_uri() . "/assets/images/sample-products/" . $product['src'];
-						if($i == 0) :
+		      $delay = 0;
+		      $solution_categories = new WP_Query($args);
 				?>
-					<div class="col-xs-12 decPadding">
-						<div class="product product-first">
-							<div
-								class="product_photo"
-								style="<?php echo "background-image: " . $photoOverlayBg . ", url('" . $photoUrl . "')" ?>"
-							>
-							</div>
-							<div class="product_overlay product-first_overlay">
-								<div class="product_name">
-									<?php echo $product['name']; ?>
-								</div>
-								<div class="product_desc">
-									<?php echo $product['desc']; ?>
-								</div>
-							</div>
-						</div>
-					</div>
-				<?php else : ?>
-					<div class="col-xs-12 col-sm-6 decPadding">
-						<div class="product">
-							<div
-								class="product_photo"
-								style="<?php echo "background-image: " . $photoOverlayBg . ", url('" . $photoUrl . "')" ?>"
-							>
-							</div>
-							<div class="product_overlay">
-								<div class="product_name">
-									<?php echo $product['name']; ?>
-								</div>
-								<div class="product_desc">
-									<?php echo $product['desc']; ?>
-								</div>
-							</div>
-						</div>
-					</div>
-				<?php
-						endif;
-					endforeach;
-				?>
-			</div>
-			<div class="row decPadding">
-				<div class="col-xs-12 decPadding">
-					<div class="home_moreLink">
-						<a href="#">
-							View More Products <i class="fa fa-angle-right"></i>
-						</a>
-					</div>
-				</div>
+				<?php if($solution_categories->have_posts()) : while($solution_categories->have_posts()) : $solution_categories->the_post(); ?>
+					<?php $colClass = ($delay == 0) ? "col-md-6 offset-lg-2 col-lg-4 wow fadeInLeft" : "col-md-6 col-lg-4 wow fadeInLeft"; ?>
+					<div class="<?php echo $colClass ?>" data-wow-delay="<?php echo $delay . "s"; ?>">
+            <?php $serviceBg = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large'); ?>
+            <div class="box home_service">
+            	<a href="/products-solutions">
+	              <div
+	              	class="box_content"
+	              	style="background-image: url(<?php echo $serviceBg[0]; ?>)"
+	            	>
+	              </div>
+	              <div class="box_info">
+	              	<div class="box_title">
+	                  <?php the_title(); ?>
+	                </div>
+	                <div class="box_desc">
+	                	<?php the_excerpt(); ?>
+	                </div>
+	              </div>
+              </a>
+            </div>
+          </div>
+				<?php $delay += 0.1; endwhile; endif; ?>
 			</div>
 		</div>
 	</div>
@@ -263,7 +185,7 @@
 								<?php the_excerpt(); ?>
 							</div>
 							<div class="news_readMore">
-								<a href="#">Read More</a>
+								<a href="<?php the_permalink(); ?>">Read More</a>
 							</div>
 						</div>
 					</div>
@@ -272,19 +194,6 @@
 						endwhile;
 					endif;
 				?>
-			</div>
-		</div>
-	</div>
-	<div class="home_newsFooter">
-		<div class="container-fluid">
-			<div class="row decPadding">
-				<div class="col-xs-12 decPadding">
-					<div class="home_moreLink">
-						<a href="#">
-							View More Articles <i class="fa fa-angle-right"></i>
-						</a>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -341,20 +250,6 @@
 				<?php
 					endforeach;
 				?>
-			</div>
-		</div>
-	</div>
-
-	<div class="home_newsFooter">
-		<div class="container-fluid">
-			<div class="row decPadding">
-				<div class="col-xs-12 decPadding">
-					<div class="home_moreLink">
-						<a href="#">
-							Learn More <i class="fa fa-angle-right"></i>
-						</a>
-					</div>
-				</div>
 			</div>
 		</div>
 	</div>
