@@ -24,5 +24,6 @@ vendor/
 /sitemap.xml
 /sitemap.xml.gz
 
+/config.codekit3
 /config.codekit
 .codekit-cache/
