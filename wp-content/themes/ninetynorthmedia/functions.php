@@ -1,9 +1,10 @@
 <?php
 
 $officeInfo = [
-	'address' => '509 Emerald Court Bldg., 54 Road 3, Project 6, QC, PH 1100',
+	'address' => '502/503/509 Emerald Court Bldg., 54 Road 3, Project 6, QC, PH',
 	'email' => 'info@90northmedia.com',
-	'phone' => '(02) 959 6837',
+	'phone' => '+63 (2) 398 0356',
+	'phone2' => '+63 (917) 582 6147 / +63 (917) 109 6147',
 	'facebook' => '/90degreesnorth',
 	'messenger' => '90degreesnorth',
 	'linkedin' => '/company/90-degrees-north-inc-'

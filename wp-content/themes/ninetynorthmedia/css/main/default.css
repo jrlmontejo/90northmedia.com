@@ -446,6 +446,43 @@ p span {
 	padding-left: 10px;
 }
 
+.home_solution {
+	margin: 0 auto;
+	margin-bottom: 30px;
+	max-width: none;
+}
+.home_solution .box_content {
+	height: 200px;
+	background-size: cover;
+	background-position: center;
+}
+.home_solution .box_info {
+	padding: 0;
+}
+.home_solution .box_title {
+	padding: 10px 0;
+	color: #D92935;
+	font-size: 1.1em;
+	text-align: center;
+	border-bottom: 1px solid #DBDBDB;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.home_solution .box_desc {
+	padding: 10px 25px 10px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.home_solution .box_desc ul {
+	margin-bottom: 0;
+}
+.home_solution .box_desc p {
+	margin-bottom: 0;
+}
+
+
 .home_service {
 	margin: 0 auto;
 	margin-bottom: 30px;
@@ -463,17 +500,11 @@ p span {
 	padding: 10px 0;
 	text-align: center;
 	color: #D92935;
-	border-bottom: 1px solid #DBDBDB;
 	font-size: 1.1em;
-}
-.home_service .box_desc {
-	padding: 15px 10px;
-	text-align: center;
-	height: 135px;
-	overflow-y: auto;
-}
-.home_service .box_desc p {
-	margin-bottom: 0;
+	height: 79px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .home_products {
@@ -653,6 +684,10 @@ p span {
   height: 100%;
 }
 
+.about_whatWeDo {
+	min-height: 0;
+}
+
 .about_whatWeDoPhoto {
 	margin-bottom: 40px;
 }
@@ -660,6 +695,8 @@ p span {
 	text-align: justify;
 	max-width: 800px;
 	margin: 0 auto;
+	margin-top: 30px;
+	font-size: 1.1em;
 }
 .about_team .people {
 	max-width: 250px;
@@ -674,6 +711,10 @@ p span {
 	border-top: 1px solid #F7F7F7;
 	overflow: hidden;
 	background-color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 .about_team .people_name {
 	font-weight: bold;
@@ -767,6 +808,10 @@ p span {
 .services {
 	padding: 25px 0;
 }
+.services_intro {
+	min-height: 0;
+}
+
 .services_introText {
 	text-align: justify;
 	max-width: 800px;
@@ -778,6 +823,11 @@ p span {
 	background-position: center;
 	background-repeat: no-repeat;
 }
+.services_category .panel_title {
+	margin-top: 60px;
+	margin-bottom: 60px;
+}
+
 .services_entry {
 	margin: 10px auto;
 	border: 0;
@@ -793,6 +843,9 @@ p span {
 /* Solutions */
 .solutions {
 	padding: 25px 0;
+}
+.solutions_intro {
+	min-height: 0;
 }
 
 .solutions_introText {

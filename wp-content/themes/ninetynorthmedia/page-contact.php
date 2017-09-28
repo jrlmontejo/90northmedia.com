@@ -39,8 +39,14 @@
 						<?php echo $officeInfo['email'] ?>
 					</div>
 					<div class="contact_other contact_other-phone">
-						<i class="fa fa-phone fa-lg fa-fw"></i>
-						<?php echo $officeInfo['phone'] ?>
+						<div class="social_info">
+							<i class="fa fa-phone fa-lg fa-fw"></i>
+							<?php echo $officeInfo['phone'] ?>
+						</div>
+						<div class="social_info">
+							<i class="fa fa-mobile fa-lg fa-fw"></i>
+							<?php echo $officeInfo['phone2'] ?>
+						</div>
 					</div>
 					<div class="contact_other contact_other-social">
 						<div class="social_info">

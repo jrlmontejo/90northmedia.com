@@ -31,3 +31,10 @@
 .quote_form textarea {
   height: 222px;
 }
+
+.home_solution .box_title {
+  height: auto;
+}
+.home_solution .box_desc {
+  height: 167px;
+}

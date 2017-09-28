@@ -15,16 +15,11 @@
         <div class="col-xs-12">
           <div class="services_introText">
             <p>
-              By providing tailored solutions, supplying standard and state-of-the-art equipment, design &amp; engineering services,
+              By supplying standard and state-of-the-art equipment, design &amp; engineering services,
               we have become a strategic supplier, business partner, and technical reference in the Philippine market for all major
               customers in the field of <span>Film</span>, <span>Broadcasting</span>, <span>Telecommunications</span>,
               <span>Government</span>, <span>Education</span>, <span>Medical</span>, <span>Industrial</span>, <span>Testing</span>,
               and <span>Security</span>.
-            </p>
-            <p>
-              We successfully distribute and represent many of the renowned global brands. Our dynamic, experienced and highly
-              professional <span>engineering and production team</span> provides application technical support, project management and design
-              in solutions for their customers including start-ups.
             </p>
           </div>
         </div>
@@ -45,54 +40,58 @@
         ?>
         <?php if($service_categories->have_posts()) : while($service_categories->have_posts()) : $service_categories->the_post(); ?>
           <div class="col-xs-12">
-            <?php $serviceBg = wp_get_attachment_url( get_post_thumbnail_id()); ?>
+            <?php $serviceBg = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large'); ?>
+            <div id="<?php echo get_post_field('post_name', get_post()); ?>"></div>
             <div
               class="panel services_category"
-              style="background-image: url(<?php echo $serviceBg; ?>)"
+              style="background-image: url(<?php echo $serviceBg[0]; ?>)"
             >
               <div class="panel_content">
-                <h2 class="panel_title">
+                <h2  class="panel_title">
                   <?php the_title(); ?>
                 </h2>
                 <div class="panel_desc">
                   <?php the_content(); ?>
                 </div>
               </div>
-              <div class="panel_append">
-                <div class="row">
-                  <?php
-                    $inner_args = [
-                      'post_type' => 'services_offered',
-                      'posts_per_page' => -1,
-                      'meta_query' => [[
-                        'key' => 'category',
-                        'value' => get_the_ID(),
-                        'compare' => 'LIKE'
-                      ]]
-                    ];
+              <?php
+                $inner_args = [
+                  'post_type' => 'services_offered',
+                  'posts_per_page' => -1,
+                  'meta_query' => [[
+                    'key' => 'category',
+                    'value' => get_the_ID(),
+                    'compare' => 'LIKE'
+                  ]]
+                ];
 
-                    $i = 1;
-                    $services = new WP_Query($inner_args);
-                  ?>
-                  <?php if($services->have_posts()) : while($services->have_posts()) : $services->the_post(); ?>
-                    <div class="col-md-4 col-lg-3">
-                      <div class="box wow fadeInUp services_entry">
-                        <div class="box_info">
-                          <?php the_title(); ?>
+                $i = 1;
+                $services = new WP_Query($inner_args);
+
+                if($services->have_posts()) :
+              ?>
+                <div class="panel_append">
+                  <div class="row">
+                    <?php while($services->have_posts()) : $services->the_post(); ?>
+                      <div class="col-md-4 col-lg-3">
+                        <div class="box wow fadeInUp services_entry">
+                          <div class="box_info">
+                            <?php the_title(); ?>
+                          </div>
                         </div>
                       </div>
-                    </div>
 
-                    <?php if($i % 3 == 0) : ?>
-                      <div class="clearfix hidden-sm-down hidden-lg-up"></div>
-                    <?php endif; ?>
+                      <?php if($i % 3 == 0) : ?>
+                        <div class="clearfix hidden-sm-down hidden-lg-up"></div>
+                      <?php endif; ?>
 
-                    <?php if($i % 4 == 0) : ?>
-                      <div class="clearfix hidden-md-down"></div>
-                    <?php endif; ?>
-                  <?php $i++; endwhile; endif; ?>
+                      <?php if($i % 4 == 0) : ?>
+                        <div class="clearfix hidden-md-down"></div>
+                      <?php endif; ?>
+                    <?php $i++; endwhile; ?>
+                  </div>
                 </div>
-              </div>
+              <?php endif; ?>
             </div>
           </div>
         <?php endwhile; endif; ?>

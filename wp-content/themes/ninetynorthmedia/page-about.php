@@ -9,8 +9,8 @@
 <section data-id="about" id="content" role="main" class="about">
 
 	<div class="pageSection about_whatWeDo">
-		<h2 class="pageSection_title">What We Do</h2>
-		<div class="container-fluid">
+		<h2 class="pageSection_title">About</h2>
+		<!-- div class="container-fluid">
 			<div class="row">
 				<div class="col-xs-12">
 					<div class="about_fade">
@@ -33,7 +33,7 @@
 					</div>
 				</div>
 			</div>
-		</div>
+		</div -->
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
@@ -42,18 +42,6 @@
 							We are a company engaged in <span>TV Production</span>, <span>Film</span>, <span>Rentals</span>,
 							<span>Distributorships / Representatives</span> and <span>System Integration</span>.
 							With Partners and Principals across the USA, Europe and Asia Pacific.
-						</p>
-						<p>
-							By providing tailored solutions, supplying standard and state-of-the-art equipment, design &amp; engineering services,
-							we have become a strategic supplier, business partner, and technical reference in the Philippine market for all major
-							customers in the field of <span>Film</span>, <span>Broadcasting</span>, <span>Telecommunications</span>,
-							<span>Government</span>, <span>Education</span>, <span>Medical</span>, <span>Industrial</span>, <span>Testing</span>,
-							and <span>Security</span>.
-						</p>
-						<p>
-							We successfully distribute and represent many of the renowned global brands. Our dynamic, experienced and highly
-							professional <span>engineering and production team</span> provides application technical support, project management and design
-							in solutions for their customers including start-ups.
 						</p>
 					</div>
 				</div>

@@ -43,7 +43,32 @@ var App = (function($) {
 
 		function initProductSlider() {
 			$('#lightSlider').lightSlider({
-				adaptiveHeight: true
+				adaptiveHeight: true,
+				item: 4,
+				slideMove: 2,
+				responsive: [
+					{
+						breakpoint: 1200,
+						settings: {
+							item: 3,
+							slideMove: 1
+						}
+					},
+					{
+						breakpoint: 768,
+						settings: {
+							item: 2,
+							slideMove: 1
+						}
+					},
+					{
+						breakpoint: 576,
+						settings: {
+							item: 1,
+							slideMove: 1
+						}
+					}
+				]
 			});
 		}
 

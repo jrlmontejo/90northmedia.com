@@ -20,7 +20,7 @@
               manner. After submitting this form, a representative will respond to you shortly.
             </p>
             <p>
-              For immediate concerns, you can reach us at <span>(02) 959 6837</span>. You may visit our
+              For immediate concerns, you may reach us at <span><?php global $officeInfo; echo $officeInfo['phone']; ?></span> or visit our
               <a target="_blank" href="/contact-us">Contact</a> page for other contact details.
             </p>
           </div>

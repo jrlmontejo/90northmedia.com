@@ -8126,8 +8126,8 @@
 		"oA": 0,
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/clients\/cnn.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -8137,8 +8137,8 @@
 		"oA": 0,
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/clients\/dziq.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -8159,8 +8159,8 @@
 		"oA": 0,
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/clients\/ptv.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -8170,8 +8170,8 @@
 		"oA": 0,
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/clients\/rpn.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -8181,8 +8181,8 @@
 		"oA": 0,
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/clients\/smni.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -8213,7 +8213,7 @@
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/film.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/it-networking.jpg": {
@@ -8232,8 +8232,8 @@
 		"oA": 0,
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/it-networking.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -8244,7 +8244,7 @@
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/logo.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/logo.png": {
@@ -8253,8 +8253,8 @@
 		"oA": 0,
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/logo.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -8264,8 +8264,8 @@
 		"oA": 0,
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/partners\/advantech.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -8275,8 +8275,8 @@
 		"oA": 0,
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/partners\/ateme.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -8286,8 +8286,8 @@
 		"oA": 0,
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/partners\/be.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -8297,8 +8297,8 @@
 		"oA": 0,
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/partners\/caton.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -8308,8 +8308,8 @@
 		"oA": 0,
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/partners\/dielectric.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -8319,8 +8319,8 @@
 		"oA": 0,
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/partners\/electroline.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -8330,8 +8330,8 @@
 		"oA": 0,
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/partners\/hitachi.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -8374,8 +8374,8 @@
 		"oA": 0,
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/partners\/sennheiser.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -8385,8 +8385,8 @@
 		"oA": 0,
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/partners\/spectra.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -8396,8 +8396,8 @@
 		"oA": 0,
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/partners\/transradio.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -8407,8 +8407,8 @@
 		"oA": 0,
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/partners\/wohler.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -8422,68 +8422,6 @@
 		"opt": 0,
 		"q": 100
 		},
-	"\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/sample-products\/audio monitor.jpg": {
-		"ft": 16384,
-		"iS": 96350,
-		"oA": 0,
-		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/sample-products\/audio monitor.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/sample-products\/audio monitor2.jpg": {
-		"ft": 16384,
-		"iS": 37502,
-		"oA": 0,
-		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/sample-products\/audio monitor2.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/sample-products\/storage.png": {
-		"ft": 32768,
-		"iS": 5790575,
-		"oA": 0,
-		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/sample-products\/storage.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/sample-products\/storage2.png": {
-		"ft": 32768,
-		"iS": 87780,
-		"oA": 0,
-		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/sample-products\/storage2.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/sample-products\/transmitter.jpg": {
-		"ft": 16384,
-		"iS": 50940,
-		"oA": 0,
-		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/sample-products\/transmitter.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/sample-products\/transmitter2.jpg": {
-		"ft": 16384,
-		"iS": 31342,
-		"oA": 0,
-		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/sample-products\/transmitter2.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
 	"\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/software-distribution.jpg": {
 		"ft": 16384,
 		"iS": 72432,
@@ -8491,7 +8429,7 @@
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/software-distribution.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/structured-cabling.jpg": {
@@ -8501,7 +8439,7 @@
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/structured-cabling.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/tower-bg.jpg": {
@@ -8511,7 +8449,7 @@
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/tower-bg.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/tower-bg2.jpg": {
@@ -8531,12 +8469,22 @@
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/tower-bg3.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/tower-bg4.jpeg": {
 		"ft": 16384,
 		"iS": 154681,
+		"oA": 0,
+		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/tower-bg4.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/tower-bg4.jpg": {
+		"ft": 16384,
+		"iS": 153582,
 		"oA": 0,
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/tower-bg4.jpg",
 		"oF": 0,
@@ -8561,7 +8509,7 @@
 		"oAP": "\/wp-content\/themes\/ninetynorthmedia\/assets\/images\/whatwedo2.jpg",
 		"oF": 0,
 		"oIPL": 0,
-		"opt": 0,
+		"opt": 1,
 		"q": 100
 		},
 	"\/wp-content\/themes\/ninetynorthmedia\/attachment.php": {

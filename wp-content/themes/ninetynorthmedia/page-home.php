@@ -18,18 +18,18 @@
 				With Partners and Principals across the USA, Europe and Asia Pacific.
 			</div>
 			<div class="home_atfHeaderMore">
-				<a href="#homePageMore">
+				<a href="#welcome">
 					<span class="fa fa-angle-down fa-4x"></span>
 				</a>
 			</div>
 		</div>
 	</div>
 
-	<div id="homePageMore"></div>
+	<div id="welcome"></div>
 
 	<div class="pageSection home_products">
 		<h2 class="pageSection_title">Featured Products</h2>
-		<div class="container-fluid">
+		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
 					<ul id="lightSlider">
@@ -84,10 +84,10 @@
           $service_categories = new WP_Query($args);
         ?>
         <?php if($service_categories->have_posts()) : while($service_categories->have_posts()) : $service_categories->the_post(); ?>
-					<div class="col-lg-4 wow fadeInLeft" data-wow-delay="<?php echo $delay . "s"; ?>">
+					<div class="col-md-4 wow fadeInLeft" data-wow-delay="<?php echo $delay . "s"; ?>">
             <?php $serviceBg = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large'); ?>
             <div class="box home_service">
-            	<a href="/services">
+            	<a href="/services#<?php echo get_post_field('post_name', get_post()); ?>">
 	              <div
 	              	class="box_content"
 	              	style="background-image: url(<?php echo $serviceBg[0]; ?>)"
@@ -96,9 +96,6 @@
 	              <div class="box_info">
 	              	<div class="box_title">
 	                  <?php the_title(); ?>
-	                </div>
-	                <div class="box_desc">
-	                	<?php the_excerpt(); ?>
 	                </div>
 	              </div>
               </a>
@@ -110,7 +107,7 @@
 	</div>
 
 	<div class="pageSection home_solutions">
-		<h2 class="pageSection_title">Solutions</h2>
+		<h2 class="pageSection_title">Products &amp; Solutions</h2>
 		<div class="container">
 			<div class="row decPadding">
 				<?php
@@ -125,10 +122,10 @@
 				?>
 				<?php if($solution_categories->have_posts()) : while($solution_categories->have_posts()) : $solution_categories->the_post(); ?>
 					<?php $colClass = ($delay == 0) ? "col-md-6 offset-lg-2 col-lg-4 wow fadeInLeft" : "col-md-6 col-lg-4 wow fadeInLeft"; ?>
-					<div class="<?php echo $colClass ?>" data-wow-delay="<?php echo $delay . "s"; ?>">
+					<div class="col-md-4 wow fadeInLeft" data-wow-delay="<?php echo $delay . "s"; ?>">
             <?php $serviceBg = wp_get_attachment_image_src(get_post_thumbnail_id(), 'large'); ?>
-            <div class="box home_service">
-            	<a href="/products-solutions">
+            <div class="box home_solution">
+            	<a href="/products-solutions#<?php echo get_post_field('post_name', get_post()); ?>">
 	              <div
 	              	class="box_content"
 	              	style="background-image: url(<?php echo $serviceBg[0]; ?>)"
@@ -139,7 +136,7 @@
 	                  <?php the_title(); ?>
 	                </div>
 	                <div class="box_desc">
-	                	<?php the_excerpt(); ?>
+	                	<?php the_content(); ?>
 	                </div>
 	              </div>
               </a>
@@ -150,53 +147,55 @@
 		</div>
 	</div>
 
-	<div class="pageSection home_news">
-		<h2 class="pageSection_title">Latest News</h2>
-		<div class="container-fluid">
-			<div class="row">
-				<?php
-					$args = [
-						'post_type'      => 'post',
-						'nopaging'       => true,
-						'posts_per_page' => 4
-					];
+	<?php
+		$args = [
+			'post_type'      => 'post',
+			'nopaging'       => true,
+			'posts_per_page' => 4
+		];
 
-					$delay = 0;
-					$news = new WP_Query($args);
-				?>
-				<?php if($news->have_posts()) : while($news->have_posts()) : $news->the_post(); ?>
-					<div class="col-md-4">
-						<div class="news wow fadeIn" data-wow-delay="<?php echo $delay . "s"; ?>">
-							<div
-								class="news_thumb focuspoint"
-								data-focus-x="0"
-								data-focus-y="0"
-							>
-								<?php $featureImage = get_the_post_thumbnail_url(); ?>
-								<img src="<?php echo $featureImage; ?>" />
-							</div>
-							<div class="news_title">
-								<?php the_title(); ?>
-							</div>
-							<div class="news_date">
-								<?php echo get_the_date(); ?>
-							</div>
-							<div class="news_excerpt">
-								<?php the_excerpt(); ?>
-							</div>
-							<div class="news_readMore">
-								<a href="<?php the_permalink(); ?>">Read More</a>
+		$delay = 0;
+		$news = new WP_Query($args);
+
+		if($news->have_posts()) :
+	?>
+		<div class="pageSection home_news">
+			<h2 class="pageSection_title">Latest News</h2>
+			<div class="container-fluid">
+				<div class="row">
+					<?php while($news->have_posts()) : $news->the_post(); ?>
+						<div class="col-md-4">
+							<div class="news wow fadeIn" data-wow-delay="<?php echo $delay . "s"; ?>">
+								<div
+									class="news_thumb focuspoint"
+									data-focus-x="0"
+									data-focus-y="0"
+								>
+									<?php $featureImage = get_the_post_thumbnail_url(); ?>
+									<img src="<?php echo $featureImage; ?>" />
+								</div>
+								<div class="news_title">
+									<?php the_title(); ?>
+								</div>
+								<div class="news_date">
+									<?php echo get_the_date(); ?>
+								</div>
+								<div class="news_excerpt">
+									<?php the_excerpt(); ?>
+								</div>
+								<div class="news_readMore">
+									<a href="<?php the_permalink(); ?>">Read More</a>
+								</div>
 							</div>
 						</div>
-					</div>
-				<?php
+					<?php
 							$delay += 0.1;
 						endwhile;
-					endif;
-				?>
+					?>
+				</div>
 			</div>
 		</div>
-	</div>
+	<?php endif; ?>
 
 	<div class="pageSection home_partners">
 		<h2 class="pageSection_title">Major Partners</h2>
