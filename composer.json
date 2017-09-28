@@ -9,6 +9,7 @@
     "wpackagist-plugin/advanced-custom-fields": "@dev",
     "wpackagist-plugin/under-construction-page": "@dev",
     "wpackagist-plugin/post-types-order": "@dev",
-    "wpackagist-plugin/contact-form-7": "@dev"
+    "wpackagist-plugin/contact-form-7": "@dev",
+    "wpackagist-plugin/wordpress-seo": "@dev"
   }
 }
