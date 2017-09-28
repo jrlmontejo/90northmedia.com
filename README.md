@@ -1,4 +1,4 @@
-# 90northmedia.com #
+# 90 Degrees North, Inc. #
 
 ### How do I get set up? ###
 
